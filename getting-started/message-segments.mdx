@@ -1,0 +1,91 @@
+---
+title: "Message Segments"
+description: "Learn what SMS message segments are, how encoding affects them, and how to minimize costs."
+---
+
+## What Are Message Segments and Why Do They Matter?
+
+If you're sending SMS announcements for your business, you've probably focused on writing short, punchy messages that drive action. But there's a technical detail under the hood that affects your **delivery costs, performance**, and even **message formatting**: **SMS message segmentation**.
+
+In this article, we'll explain what SMS segments are, how they work, and what marketers need to know to avoid unnecessary costs while still creating compelling, on-brand messages.
+
+## What Is an SMS Segment?
+
+An **SMS segment** is the number of character "chunks" your message is broken into before it's sent over the mobile network. Mobile carriers have a limit on how much text can be included in a single SMS — if your message is too long, it's split into multiple segments automatically.
+
+Each segment adds to your **billing count** and can affect **how the message appears to the recipient**.
+
+## Segment Length Depends on Encoding
+
+The two main SMS encoding types directly impact how many characters fit into a single segment:
+
+| Encoding Type       | Characters per 1 Segment | Characters per Segment (Multipart) |
+| ------------------- | ------------------------ | ---------------------------------- |
+| **GSM-7**           | 160 characters           | 153 characters                     |
+| **Unicode (UCS-2)** | 70 characters            | 67 characters                      |
+
+Learn more about [SMS encoding](https://learn.captivated.works/help/sms-encoding-and-special-characters/).
+
+## How Multipart SMS Works
+
+When your message exceeds the segment limit (160 for GSM-7 or 70 for Unicode), it becomes a **multipart message**. That means:
+
+- Your message is broken into chunks.
+- Each chunk is sent separately with headers that help phones reassemble them.
+- The character count per segment is slightly reduced to allow room for this header (153 or 67 characters per segment).
+
+**Example**: A 325-character GSM-7 message = 3 segments (153 + 153 + 19)
+
+## Why Segments Matter to Your Business
+
+### 1. More Segments = More Cost
+
+The sender is charged **per segment**, not per message. That means a message with 2–3 segments can **double or triple** your cost per send.
+
+### 2. Multipart Delivery Risks
+
+Sometimes multipart messages may arrive:
+
+- Out of order
+- With slight delays
+- Missing formatting consistency
+
+This can negatively impact urgent or time-sensitive campaigns.
+
+### 3. User Experience
+
+Long messages may get truncated or split awkwardly. Keeping messages within 1 segment improves clarity and engagement.
+
+## Tips to Minimize SMS Segments
+
+- **Use character counters.** Utilize [online tools](https://twiliodeved.github.io/message-segment-calculator/) that will show you how many segments your message uses in real time.
+- **Avoid emojis unless they're essential.** Emojis switch your encoding to Unicode, shrinking your usable characters per segment.
+- **Don't copy and paste from Word or Google Docs.** These tools often use curly quotes and hidden special characters that force Unicode encoding.
+- **Use link shorteners.** Long URLs take up a lot of space — use branded or third-party shorteners (like Bit.ly or Rebrandly) to save room.
+- **A/B test shorter copy.** Sometimes, saying less increases conversion — and saves on segments.
+
+## Segment Counts and Cost Planning
+
+Most marketing teams overlook segments when budgeting for SMS campaigns. Here's a quick cost scenario:
+
+- Campaign A: 100,000 recipients, 1 segment each → 100,000 segments
+- Campaign B: 100,000 recipients, 3 segments each → 300,000 segments
+
+That's a **3x cost increase** for essentially the same message, just a little longer.
+
+Understanding how segment math works gives you better control over campaign performance and spend.
+
+## Summary: Smart SMS Campaigns Start With Segment Awareness
+
+**Segments matter.** They affect how your message is sent, how much you pay, and how your users experience it.
+
+Before you hit send:
+
+- Check your character and segment count.
+- Watch out for encoding changes from special characters.
+- Stay concise and clear for better deliverability and ROI.
+
+By designing campaigns with SMS segmentation in mind, you'll create messages that are not only **cost-effective** but also **more impactful**.
+
+**Need help optimizing your next SMS campaign?**  
+Get in touch — our team can help you craft messages that perform better, cost less, and reach more people.

@@ -1,0 +1,95 @@
+---
+title: "SMS Encoding and Special Characters"
+description: "Understand GSM-7 and Unicode SMS encoding and how special characters affect your message cost and length."
+---
+
+## What You Need to Know
+
+In the fast-paced world of digital marketing, **SMS campaigns** remain one of the most direct and effective channels to reach customers. But as you craft your next SMS announcement, there's a technical detail that can seriously impact both your **campaign cost** and **user experience**: **SMS encoding**.
+
+Let's break down what SMS encoding is, how special characters affect it, and what that means for marketers looking to maximize ROI while keeping messages engaging.
+
+## What Is SMS Encoding?
+
+When you send an SMS, the message isn't just passed along in plain text. It's **encoded**, or translated into a format that mobile networks can deliver. The type of encoding determines:
+
+- **Which characters you can use**
+- **How many characters fit in a single SMS**
+- **Whether your message is sent as one or multiple SMS segments**
+
+The two most common encoding types are **GSM-7** and **Unicode (UCS-2)**.
+
+## GSM-7: The Default and Most Efficient
+
+**GSM-7** is the standard character set for most SMS messages. It includes:
+
+- Basic Latin letters (A–Z, a–z)
+- Numbers (0–9)
+- Common punctuation and symbols (e.g., !, @, #)
+
+### Character Limit:
+
+- **160 characters per message**
+- If the message is split (concatenated), each segment holds **153 characters** (to allow for headers).
+
+### Why Marketers Like GSM-7:
+
+- Efficient — allows longer messages.
+- Lower cost — fewer message segments needed.
+- Universally supported — works on almost all mobile phones.
+
+## Unicode (UCS-2): For Non-Standard or Special Characters
+
+Unicode is required when your message includes:
+
+- Emojis
+- Accented characters (é, ñ, ü)
+- Non-Latin alphabets (e.g., Chinese, Arabic, Cyrillic)
+
+### Character Limit:
+
+- **70 characters per message**
+- Concatenated messages are **67 characters** per segment.
+
+### Why Marketers Should Be Cautious:
+
+- Messages are shorter.
+- Costs can increase if the message gets split into multiple segments.
+- Can be essential for localization or personalization.
+
+## Common Characters That Trigger Unicode Encoding
+
+You might think you're sticking to standard text, but a single special character can convert your entire message into Unicode. Here are a few common culprits:
+
+- Emojis
+- Curly quotes (" ")
+- Accented characters (e.g., naïve, fiancé)
+- Symbols not in GSM-7 (€, ©, ™)
+
+**Tip**: Use online [SMS encoding checkers](https://twiliodeved.github.io/message-segment-calculator/) to test your messages before sending.
+
+## Why This Matters for Your SMS Marketing Strategy
+
+1. **Campaign Cost Management**  
+Using special characters may double or triple your costs if your message breaks into multiple segments. Always calculate how many segments your message will use.
+
+2. **Message Delivery and Timing**  
+Multipart messages can lead to delays or out-of-order delivery, which could hurt time-sensitive campaigns like flash sales or limited-time offers.
+
+3. **Brand Tone and Engagement**  
+Emojis and accents can boost engagement and make messages feel personal and on-brand. Just make sure the trade-off in message length and cost is worth it.
+
+## Best Practices for SMS Encoding in Marketing
+
+- **Stick to GSM-7** whenever possible for efficiency.
+- **Test messages** with different encodings before launching a campaign.
+- **Use emojis sparingly** — prioritize clarity over cleverness.
+- **Avoid special punctuation** (like curly quotes copied from Word or Google Docs).
+- **Segment by region or language** if you're localizing and need Unicode for non-Latin alphabets.
+- **Preview message length and segment count** using your SMS platform or a character counter tool.
+
+## Conclusion: Smart Messaging Starts with Smart Encoding
+
+Understanding the difference between **GSM-7 and Unicode** can help you create SMS campaigns that are both cost-effective and impactful. As you build your next campaign, take a moment to consider how every character affects your bottom line.
+
+Keep your messages **clear, concise, and encoding-aware**, and you'll be well on your way to higher engagement and a better ROI.
