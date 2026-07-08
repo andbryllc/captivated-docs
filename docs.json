@@ -1,0 +1,219 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Captivated",
+  "description": "Help Center for Captivated — the conversation management platform for business texting.",
+  "colors": {
+    "primary": "#009CDB",
+    "light": "#4FC3E8",
+    "dark": "#007CAD"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/logo-light.svg",
+    "dark": "/logo/logo-dark.svg",
+    "href": "https://captivated.works"
+  },
+  "background": {
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#0B1A24"
+    }
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Welcome",
+        "pages": [
+          "index"
+        ]
+      },
+      {
+        "group": "Getting Started",
+        "pages": [
+          "getting-started/success-pt1",
+          "getting-started/best-texting-practices-for-your-business",
+          "getting-started/best-texting-practices-for-your-dealership",
+          "getting-started/marketing",
+          "getting-started/logging-in-to-captivated",
+          "getting-started/downloading-the-mobile-app",
+          "getting-started/sms-encoding-and-special-characters",
+          "getting-started/message-segments"
+        ]
+      },
+      {
+        "group": "Features",
+        "pages": [
+          {
+            "group": "Messaging",
+            "pages": [
+              "features/sending-a-message",
+              "features/group-messaging",
+              "features/scheduling-a-message",
+              "features/sending-attachments",
+              "features/voice-memos-files",
+              "features/mentions",
+              "features/adding-an-internal-note",
+              "features/templates",
+              "features/announcements",
+              "features/setting-your-signature"
+            ]
+          },
+          {
+            "group": "Conversations",
+            "pages": [
+              "features/conversations-transferring",
+              "features/conversation-filtering-and-searching",
+              "features/printing-a-conversation-transcript",
+              "features/the-dashboard"
+            ]
+          },
+          {
+            "group": "Contacts",
+            "pages": [
+              "features/creating-and-editing-contacts",
+              "features/importing-contacts",
+              "features/tagging-contacts",
+              "features/archive-contacts",
+              "features/masking-numbers",
+              "features/contact-exchange-request",
+              "features/sending-your-contact-card",
+              "features/sms-verification",
+              "features/blocking-a-contact",
+              "features/opting-out"
+            ]
+          },
+          {
+            "group": "Calling & Payments",
+            "pages": [
+              "features/outbound-calling",
+              "features/express-pay"
+            ]
+          },
+          {
+            "group": "Message Deliverability",
+            "pages": [
+              "features/sms-error-report"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Premium Features",
+        "pages": [
+          "premium-features/automation-events-workflows",
+          "premium-features/google-review-requests",
+          "premium-features/team-chat",
+          "premium-features/secure-chat",
+          "premium-features/secure-video-chat",
+          "premium-features/requesting-a-location",
+          "premium-features/requesting-a-form",
+          "premium-features/custom-fields",
+          "premium-features/hubspot-plugin",
+          "premium-features/hubspot"
+        ]
+      },
+      {
+        "group": "Administration",
+        "pages": [
+          "administration/administration",
+          "administration/admin-users",
+          "administration/admin-teams",
+          "administration/admin-queues",
+          "administration/admin-channels",
+          "administration/keyword-actions",
+          "administration/admin-account-usage",
+          "administration/admin-account-contact-card"
+        ]
+      },
+      {
+        "group": "Integrations & Guides",
+        "pages": [
+          "integrations/googlechromeextension",
+          "integrations/hubspot-integration",
+          "integrations/jotform-integration",
+          "integrations/connecting-captivated-to-sa5",
+          "integrations/exporting-customer-list-from-sa5",
+          "integrations/send-adf-leads",
+          "integrations/google-tag-manager",
+          "integrations/customize-website-widget",
+          "integrations/scheduling",
+          "integrations/virtual-door-knock",
+          "integrations/quick-user",
+          "integrations/contact-ownership",
+          "integrations/two-factor-authentication-2fa",
+          "integrations/love-encore"
+        ]
+      },
+      {
+        "group": "FAQ",
+        "pages": [
+          "faq/message-routing-faqs",
+          "faq/why-cant-i-see-new-incoming-messages",
+          "faq/why-cant-i-complete-a-conversation",
+          "faq/why-cant-i-see-my-entire-teams-conversations",
+          "faq/unreplied",
+          "faq/failed-messages",
+          "faq/announcements-2",
+          "faq/how-do-i-import-contacts",
+          "faq/changing-a-contacts-phone-number",
+          "faq/archiving",
+          "faq/how-do-i-block-unwanted-messages-spam",
+          "faq/adding-a-profile-photo",
+          "faq/away-message",
+          "faq/notifications",
+          "faq/resetting-your-password",
+          "faq/where-can-i-see-my-account-usage",
+          "faq/how-do-i-update-my-billing-information",
+          "faq/what-do-i-do-if-i-am-changing-my-phone-carrier"
+        ]
+      },
+      {
+        "group": "What's New",
+        "pages": [
+          "updates/whats-new"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Status",
+        "href": "https://captivated.works"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq/message-routing-faqs"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Schedule a Demo",
+      "href": "https://captivated.works/contact/"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://captivated.works",
+      "facebook": "https://www.facebook.com/captivatedchat",
+      "linkedin": "https://www.linkedin.com/company/captivated"
+    },
+    "links": [
+      {
+        "header": "Company",
+        "items": [
+          { "label": "Captivated.works", "href": "https://captivated.works" },
+          { "label": "Schedule a Demo", "href": "https://captivated.works/contact/" }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          { "label": "Privacy Policy", "href": "https://captivated.works/privacy-policy-2/" },
+          { "label": "Terms & Conditions", "href": "https://captivated.works/terms-conditions/" }
+        ]
+      }
+    ]
+  }
+}
