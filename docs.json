@@ -32,6 +32,7 @@
         "group": "Getting Started",
         "pages": [
           "getting-started/success-pt1",
+          "getting-started/setting-up-my-profile",
           "getting-started/best-texting-practices-for-your-business",
           "getting-started/best-texting-practices-for-your-dealership",
           "getting-started/marketing",
@@ -63,6 +64,7 @@
             "group": "Conversations",
             "pages": [
               "features/conversations-transferring",
+              "features/closing-leaving-and-joining",
               "features/conversation-filtering-and-searching",
               "features/printing-a-conversation-transcript",
               "features/the-dashboard"
