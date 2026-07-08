@@ -1,0 +1,118 @@
+---
+title: "Automation Events & Workflows"
+description: "How automation events trigger actions on specific events and how workflows add customizable conversation states to streamline your processes."
+---
+
+## Automation Events
+
+Automation events offer a way to customize the behavior of Captivated by automatically performing specific actions when certain events take place. The easiest way to understand automation events is to use the following statement: When a specific event occurs, automatically perform one or more actions. Consider it an automatic, customizable cause-and-effect.
+
+There are two parts to an automation event:
+
+1. The Event is the *cause*: what specifically occurs to automate behavior.
+2. The Action is the *effect*: what behavior occurs as the result of the event.
+
+E.g. When a message is received containing "*competitor's name"* (event), add Mike Manager to the conversation (action).
+
+#### Events:
+
+- When a conversation is assigned to a user
+- When a conversation is queued or [taken from a queue](https://learn.captivated.works/help/taking-a-message-from-the-queue/)
+- When a [conversation is completed](https://learn.captivated.works/help/closing-leaving-and-joining/)
+- When a message is [sent](https://learn.captivated.works/help/sending-a-message/) or received
+- When a message is sent or received containing "X"
+- When a [payment request](https://learn.captivated.works/express-pay/) or [form request](https://learn.captivated.works/help/requesting-a-form/) is completed
+- When a custom button is clicked (created in workflows by Captivated Support)
+
+#### Actions:
+
+- Send a message or [template](https://learn.captivated.works/help/templates/)
+- Invite a user to the conversation
+- [Transfer a conversation](https://learn.captivated.works/help/conversations-transferring/) to a user or queue
+- Add a [note](https://learn.captivated.works/help/adding-an-internal-note/) to the conversation
+- [Complete the conversation](https://learn.captivated.works/help/conversations-transferring/)
+- [Add or remove a tag](https://learn.captivated.works/help/tagging-contacts/) from a contact
+- Send a webhook to a URL
+- Start, transition or end a Workflow (read more on Workflows)
+
+**Note**: Any of the actions listed above can be configured to trigger after X amount of time has elapsed.
+
+##### Examples of automation events:
+
+- Auto-transferring or inviting to a subject matter expert person or queue based on a keyword – i.e. "When "Corvette" is mentioned, invite Corey the Corvette expert to the conversation.
+- Automatically send your address when the word "address" or "directions", is mentioned within a text.
+- When a new trainee takes a conversation, automatically invite his or her supervisor to assist in the training.
+- When a note or message is sent containing @username, invite that user to the conversation automatically.
+- A phone tree type setup via text. E.g. "Reply 1 to check in, 2 for appointment scheduling, 3 for prescription refills."
+- Adding customizable buttons above your message field to quickly queue up your favorite templates.
+
+## Workflows
+
+In Captivated, workflows introduce the ability for conversations to be in customizable "states". By default, Captivated only tracks two states of a conversation: it is either "active" or "complete". Workflows allow you to attach your organization's own unique states.
+
+For example, a hotel may have states as simple as "Checked In" and "Checked Out", while an automotive service center may have many more states:
+
+1. the vehicle is checked in
+2. the vehicle is being inspected
+3. awaiting the customer's approval of the inspection recommendations
+4. completing the work, etc.
+
+Tracking these isolated states of your organization's processes may not be all that necessary or exciting. What makes Captivated's workflows so powerful is that they work with automation events to provide simple, streamlined, and consistent processes for your users.
+
+Let's take a simple example of a customer survey after a service is completed. Let's call this workflow "Customer Survey". When a user initiates the workflow for a user, it will immediately send a message asking the client if they would take a survey with the options YES or NO. If the client responds YES, you ask to rate their experience from 1-5. If they respond with a 4 or 5, send a thank you and wrap it up. If they respond less than a 4, we want to automatically invite the supervisor into the conversation and then ask them a followup question about what went wrong.
+
+**Pro Tip:** Start by designing your workflows on paper. Think through all the different states, and what causes the workflow to transition from one state to another. Consider building a flow chart. Understanding the states and how they relate to one another ahead of time will make it much simpler to then build into Captivated.
+
+In Captivated, the workflow will be built like this:
+
+- Workflow: "Customer Survey"
+  - States:
+    - "Initial Question"
+      - When the state is entered:
+        - Send a message: "Hi `{{salutation}}`! Thank you for your recent visit. Would you take 30 seconds to answer a survey about your experience? Please respond YES or NO.
+      - When a message is received with the text "YES":
+        - Transition to "Start Survey"
+      - When a messages is received with the text "NO":
+        - Send a message: "Okay, thanks again and have a great day!"
+        - End the workflow "Customer Survey"
+    - "Start Survey"
+      - When the state is entered:
+        - Send a message: "Thanks! On a scale of 1 to 5, how would you rate your experience?"
+      - When a message is received with the text "4" or "5":
+        - Send a message: "Thank you, glad you had a good experience. Have a great day!"
+        - End the workflow "Customer Survey"
+      - When a message is received with the text "1" or "2" or "3":
+        - Transition to state: "Low Score"
+    - "Low Score"
+      - When the state is entered:
+        - Invite the manager Bill Smith to the conversation.
+        - Send a message: "We're sorry you didn't have a more positive experience. Would you mind sharing your experience, and hopefully we can help make things better?"
+
+Obviously this is just one small example, and the same workflow can be written in many different ways. For example, we can have a state called "High Score" that the conversation will transition to on a "4" or "5" response, which will perform the same actions listed above when the state is entered. Neither implementation is right or wrong, it's just a matter of personal preference.
+
+With this implementation in mind, see how much extra horsepower automation events can bring when within the context of a state. In the above example, we are only listening to YES and NO responses when the conversation is in that specific state. This allows you to have other workflow states with yes/no questions, or a contact simply replying "yes" or "no" while in conversation, without worrying about the wrong action getting triggered.
+
+### Filtering Conversations by Workflow State
+
+Often, there may be many ongoing conversation threads in various stages of a workflow. This is when conversation filters become powerful. Use the "Advanced search" option to name and save custom searches. All saved searches can be found and edited below My Saved Searches.
+
+In the example below, Pre-Paid Orders is saved as a filter in order to only view conversations in the "Pre-paid online" workflow state.
+
+![Workflow filter example 1](https://learn.captivated.works/wp-content/uploads/2020/10/Workflow-Filter-1.png)
+![Workflow filter example 2](https://learn.captivated.works/wp-content/uploads/2020/10/Workflow-Filter-2-1.png)
+
+### Workflow State Buttons
+
+One of the most powerful features of Captivated's workflow is that you can define buttons for your users within your states. A button is simply specified as an event: "when a button is clicked". When a conversation has a workflow state that defines these events, the buttons will be presented on the screen.
+
+![Workflow state buttons](https://learn.captivated.works/wp-content/uploads/2020/10/Screenshot-2020-10-02-at-15.38.10-1024x532.jpeg)
+
+For example, let's say an automotive service center has a full workflow for their process. They may start the Automotive Service workflow when a customer checks in, but the service representatives will need to manually transition the workflow when the service on the vehicle starts and completes. A workflow can be set up so that the representative just needs to click buttons such as "Vehicle Service Started", "Inspection Complete", "Service Complete". These actions can transition to the next states and even send messages to the customer. The user does not need to manually type a message or even manually select a template… the user simply clicks a pre-defined button that does what the account administrator has implemented. This streamlines the entire process and ensures the right steps are being followed and that the right communication is occurring.
+
+The possibilities with Automation Events and Workflows are endless! If you have an idea of something you'd like to accomplish, start a conversation with the Captivated Support team using the "Support" option in the left-hand menu. We'll do our best to make it happen for you!
+
+## Workflow Video Example
+
+<iframe src="https://player.vimeo.com/video/461559238" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+For pricing and access to Automation Events & Workflows, contact Captivated Support.
