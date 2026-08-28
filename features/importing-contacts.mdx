@@ -1,65 +1,115 @@
 ---
 title: "Importing Contacts"
-description: "How to prepare clean data and bulk import up to 10,000 contacts into Captivated as an administrator or authorized user."
+description: "Bulk import contacts into Captivated using a CSV file. Administrators and Users who have been granted Contact Import permission can import up to 10,000 contacts at a time."
 ---
 
-A successful import of your contacts into Captivated starts with well-organized, clean and accurate data. Before importing your contacts into Captivated, check out these Excel tips and tricks.
+Before importing, take a few minutes to review and clean your data. A well-organized file helps prevent import errors and ensures information like names, phone numbers, Tags, and Notes are added correctly.
 
-Once you have clean and accurate data, scroll down to learn how to complete the contact import.
+## Before You Import
 
-#### 1. Split a cell
+Your import file should:
 
-If your customer file has the contacts' first and last name within one column, you can use a simple process to split the first name into one column and the last name into another column. For a successful import into Captivated, you must have first name and last name in two separate columns. This is important so that when you use `{{salutation}}` it will pull just the contact's first name making it appear more personal and less robotic.
+- Be saved as a **CSV with UTF-8 encoding**
+- Include a header/title for each column
+- Have first and last names in separate columns
+- Include the appropriate mobile phone number for each contact
+- Be reviewed for duplicate, incomplete, or inaccurate information
 
-Step 1: Insert a new column to the right of your "Name/Full Name" column if you don't have one already.
+<Warning>
+  Review your file carefully before importing, especially when updating existing contacts. Depending on the options you select during the import, existing Tags, Notes, and other contact information may be updated or replaced.
+</Warning>
 
-Step 2: Choose the Name column. In the data ribbon menu, choose Text to Columns.
+## Preparing Your CSV
 
-Step 3: In the next box, select the Delimited button and then click next.
+Captivated allows you to map information from your spreadsheet to fields within a contact record.
 
-Step 4: Check the box next to the character you want to split up the name. For example, choose space.
+Available fields include:
 
-Step 5: Click finish
+- Prefix
+- First Name
+- Last Name
+- Suffix
+- Salutation
+- Company Name
+- Phone Number
+- Email
+- Tags
+- Notes
+
+The following fields are searchable within Captivated: **First Name, Last Name, Company Name, Phone Number, and Tags.**
+
+### Separate First and Last Names
+
+First and last names should be stored in separate columns.
+
+This is especially important when using merge fields such as `{{salutation}}`, which allows Captivated to personalize a message using only the contact's first name.
+
+If your spreadsheet has a single **Full Name** column:
+
+1. Insert an empty column next to the name column.
+2. Select the name column.
+3. In Excel, select **Data → Text to Columns**.
+4. Choose **Delimited**.
+5. Select **Space** as the delimiter.
+6. Select **Finish**.
+
+<Tip>
+  Review the results afterward. Contacts with prefixes, suffixes, middle names, or multi-word last names may need to be corrected manually.
+</Tip>
 
 ![Split a cell video](https://play.vidyard.com/k2Ku1BKQiNozscSRQc5vd7.jpg)
 
-#### 2. Remove capitalization
+#### Fix Names in ALL CAPS
 
-If your contacts' first and last name are in all caps, you can use the Excel PROPER formula to change the first letter of the name to be capitalized and all other letters lowercase. This is important so that when you use the `{{salutation}}` field in templates, it appears as a personal text message versus a computer-generated text.
+If names are formatted in all capital letters, Excel's `PROPER` formula can make them easier to use in personalized messages.
 
-Step 1: Insert a new column to the right of your full name column if you don't have one already.
+For example:
 
-Step 2: In the first cell of the empty column, type the Excel PROPER formula: `=PROPER`
+**MICHAEL SCOTT → Michael Scott**
 
-Step 3: Point this formula to your data by clicking into the adjacent cell in the column to the left. Once you do this, the data will populate in the cell of the empty column.
+1. Insert a new column next to the existing name column.
+2. Enter the `PROPER` formula referencing the appropriate cell. For example: `=PROPER(A2)`
+3. Press **Enter**.
+4. Drag the formula down to apply it to the remaining contacts.
 
-Step 4: Click the cell and drag the formula down in the empty column.
+This prevents a personalized message such as `Hi {{salutation}}` from displaying as `Hi MICHAEL`.
 
 ![Remove capitalization video](https://play.vidyard.com/v7q9cRHEtCWf9T62EGE75p.jpg)
 
-#### 3. Locate import phone number from multiple phone numbers
+#### Choose a Mobile Number When Multiple Numbers Exist
 
-Sometimes, you may have several phone numbers for a customer. For example, home phone, cell phone, business phone, other phone etc. However, for a successful import into Captivated, we need the mobile number only for texting purposes. There is an Excel IF/THEN formula you can use to pull the appropriate phone number.
+Your source file may contain several phone-number fields, such as:
 
-Step 1: Insert a column to the left or right of all of your phone number columns and name the column "import phone".
+- Mobile Phone
+- Home Phone
+- Business Phone
+- Preferred Phone
 
-Step 2: Insert this formula and choose the columns that pertain to your phone number columns. The names of the columns in this example are Text Phone, Cell Phone and Preferred Phone. The formula will show the column letter and number. For example, `=IF(AM2<>"",AM2,IF(AK2<>"",AK2,AH2))` or `=IF(TEXTPHONE<>"",TEXTPHONE,IF(CELLPHONE<>"",CELLPHONE,PREFERREDPHONE))`
+If needed, you can use an Excel `IF` formula to create a single **Import Phone** column based on the order in which you'd like Excel to look for an available number.
 
-Step 3: Hit enter. Drag the formula down the column to apply it to all numbers.
+For example:
+
+`=IF(AM2<>"",AM2,IF(AK2<>"",AK2,AH2))`
+
+This tells Excel to use the first available value from the phone-number columns you've specified.
+
+<Warning>
+  Review the resulting Import Phone column before uploading your file to make sure the appropriate numbers were selected.
+</Warning>
 
 ![Locate import phone number video](https://play.vidyard.com/eYr3JvB34K3jYuVJgf4R6W.jpg)
 
-#### 4. Remove names from a phone number column
+#### Remove Names or Other Text from Phone Numbers
 
-Step 1: Insert at least one column to the right of the column that has phone numbers with names in the column.
+Phone-number fields should contain phone numbers rather than names or other text.
 
-Step 2: Highlight the column of phone numbers that have names.
+If your source data includes additional information in the same column:
 
-Step 3: Navigate to the Data ribbon at the top and choose Text to Columns.
-
-Step 4: Choose Fixed Width and then hit Next.
-
-Step 5: Move the up facing arrow to right after the last digit in the phone number.
+1. Select the affected column.
+2. Navigate to **Data → Text to Columns**.
+3. Choose **Fixed Width**.
+4. Set the break immediately after the phone number.
+5. Complete the split and review your results.
 
 ![Remove names from phone number column video](https://play.vidyard.com/ohRFjUXKTKiqM5MRhKjtNS.jpg)
 
@@ -67,71 +117,130 @@ Step 5: Move the up facing arrow to right after the last digit in the phone numb
 
 ![Administrator contact import video walkthrough](https://play.vidyard.com/bXmdBFvbwsYA9BVdCV6MaF.jpg)
 
-## Administrator Contact Import Step by Step Instructions
+## Import Your Contacts
 
-Both administrators and non-admin who have been granted access to import contacts can bulk import up to 10,000 contacts into their contact list.
+Where you access Contact Import depends on your Captivated permissions.
 
-Administrators can do so under the Administration section > Import Contacts.
+**Administrators:** Navigate to **Administration → Import Contacts**.
+
+**Users with Contact Import permission:** Navigate to **Contacts** and select the option to import contacts.
 
 ![Administration import contacts](https://learn.captivated.works/wp-content/uploads/2019/01/Screenshot-2023-09-25-at-2.41.11-PM.png)
 
-After you have cleaned up your .CSV file with UTF-8 encoding with the steps above, select your file and make sure to choose [contact ownership](/integrations/contact-ownership) settings.
+Select your prepared CSV file to begin.
 
-**Note: your CSV spreadsheet needs to have titles/headers for each column**
+If your organization uses [Contact Ownership](/integrations/contact-ownership), you'll also have the option to configure ownership during the import.
 
-Make sure to pay attention to the three starred sections and choose to either "update" or "do not import" and "add" or "replace" existing notes and/or tags.
+## Map Your Columns
 
-Adding = adding to the notes or tags that are already tied to the contact
+After uploading your CSV, map each column in your spreadsheet to the corresponding Captivated contact field.
 
-Replace = removing what is currently there in the notes or tags and replacing it with what is on the current spreadsheet
+For example:
 
-![Import mapping options](https://learn.captivated.works/wp-content/uploads/2019/01/Screenshot-2023-09-25-at-2.46.33-PM.png)
+| CSV Column | Captivated Field |
+| :-- | :-- |
+| First | First Name |
+| Last | Last Name |
+| Mobile | Phone Number |
+| Email Address | Email |
+| Customer Type | Tags |
+| Account Notes | Notes |
 
-- You must select where you'd like to map your columns from the dropdown list; if you don't select something for the column, **the row will be ignored**.
-- You can map your data to the following fields within Captivated: Prefix, First Name, Last Name, Suffix, Salutation, Company Name, Phone Number, Email, Tags, and Notes.
-- *Note: The following fields are searchable in Captivated: First Name, Last Name, Company Name, Phone Number, Tags.*
+<Warning>
+  Carefully review your field mapping before continuing. Data that isn't mapped to a Captivated field will not be imported.
+</Warning>
 
 ![Column mapping dropdown](https://learn.captivated.works/wp-content/uploads/2019/01/Screen-Shot-2022-08-03-at-2.50.29-PM.png)
 
-After you hit import, a green banner will appear at the top of your screen indicating the number of contacts that were imported.
+## Updating Existing Contacts
+
+During your import, pay close attention to the options for handling contacts that already exist in Captivated.
+
+Depending on the information being imported, you'll have options to **update** or **not import** existing information.
+
+You'll also need to determine how Captivated should handle existing **Tags and Notes**.
+
+![Import mapping options](https://learn.captivated.works/wp-content/uploads/2019/01/Screenshot-2023-09-25-at-2.46.33-PM.png)
+
+### Add vs. Replace
+
+**Add** keeps the contact's existing information and adds the information from your CSV.
+
+**Replace** removes the existing information for that field and replaces it with the information contained in your CSV.
+
+<Warning>
+  Use **Replace** carefully. If a contact already has Tags or Notes you want to keep, replacing that information may remove the existing data.
+</Warning>
+
+Take a moment to review these selections before starting the import.
+
+## Complete the Import
+
+Once you've:
+
+1. Uploaded your CSV
+2. Mapped your columns
+3. Reviewed how existing contacts should be handled
+4. Reviewed your Tags and Notes settings
+5. Configured Contact Ownership, if applicable
+
+select **Import**.
+
+After the import is complete, a confirmation banner will display the number of contacts imported.
+
+## Giving a User Contact Import Permission
+
+Administrators can allow non-Administrator Users to import contacts.
+
+Navigate to:
+
+**Administration → Users → Select User → Edit → Advanced Settings → Contact Import**
+
+Enable Contact Import and save your changes.
+
+The User can then access the import functionality from the **Contacts** section.
 
 ## Non-Administrator Contact Import Video Walkthrough
 
 ![Non-administrator contact import video walkthrough](https://play.vidyard.com/JxzcRscUNJ6eY4k2AYDCP8.jpg)
 
-## Non-Administrator Contact Import Step by Step Instructions
-
-Non-administrators who have access to import contacts can do so under the "Contacts" section of Captivated. Follow the same instructions as above to import your .CSV.
-
-![Non-administrator import under contacts](https://learn.captivated.works/wp-content/uploads/2019/01/Screenshot-2023-09-25-at-3.18.35-PM.png)
-
-If you are not seeing the option to import contacts, you can check with your Captivated Administrator to have this functionality turned on for you. Not sure who your administrator is? You can reach out to our Support team to find out.
-
-Administrators, you can turn on this functionality for non-admin users under "Administration" > View Users > User Name > Edit > Advanced Settings > Contact Import.
-
 ![Enable contact import for a user](https://learn.captivated.works/wp-content/uploads/2019/01/Screenshot-2023-09-25-at-3.16.05-PM.png)
 
-**Why are there lots of odd symbols and words after selecting my file?**
+## Frequently Asked Questions
 
-Likely due to the file being saved as an .xlsx instead of .csv with UTF-8 encoding. Navigate to your spreadsheet and hit file > save as > choose .csv with utf-8 encoding.
+<Accordion title="Why am I seeing odd symbols or text after selecting my file?">
+  Make sure your spreadsheet is saved as a **CSV with UTF-8 encoding**, rather than an Excel `.xlsx` file.
 
-**Why didn't any of my contacts import?**
+  In Excel, use **Save As** and select the appropriate CSV UTF-8 file format before trying the import again.
+</Accordion>
 
-This could be for several reasons:
+<Accordion title="Why didn't my contacts import?">
+  First, check that:
 
-1. The first name, last name and mobile number columns weren't mapped appropriately.
-2. There were letters in your phone number column in Excel.
+  - Your CSV has column headers.
+  - First Name, Last Name, and Phone Number are mapped correctly.
+  - Your phone-number column doesn't contain letters or other invalid information.
+  - The fields containing the information you want imported were mapped during the import.
+</Accordion>
 
-**What is a tag?**
+<Accordion title="What is a Tag?">
+  [Tags](/features/tagging-contacts) help organize and group contacts in Captivated. They can also be used to build recipient audiences for [Announcements](/features/announcements).
+</Accordion>
 
-A [tag](/features/tagging-contacts) is a way to easily group your contacts together to send an [announcement](/features/announcements).
+<Accordion title="Why don't I see Contact Ownership?">
+  [Contact Ownership](/integrations/contact-ownership) is not enabled for every Captivated organization.
 
-**Why don't I see contact ownership as an option?**
+  If your organization would like to use Contact Ownership, contact your Captivated Administrator or Captivated Support.
+</Accordion>
 
-Not every organization has [contact ownership](/integrations/contact-ownership) turned on. If you would like to have this enabled, please reach out to the administrator of your account and have them reach out to Captivated support.
+<Accordion title="Why don't I see the option to import contacts?">
+  Contact Import is permission-based.
 
-**Why don't I see the option to import?**
+  If you're not an Administrator and don't see the import option, ask your Captivated Administrator to enable **Contact Import** under your User's Advanced Settings.
+</Accordion>
 
-Your Captivated administrator does not have this functionality turned on for you. Reach out to them and ask to give you this permission under your user in Captivated or have your admin reach out to Captivated support.
+## Need Help?
 
-Questions? You can chat with Captivated Support via the left-hand menu or text Captivated Support at 317.316.3600
+Before completing a large import, it's a good idea to carefully review your file, field mapping, and update settings.
+
+If you're unsure about your import setup, chat with **Captivated Support** using the **Support** option in the left-hand menu or text **317.316.3600**.

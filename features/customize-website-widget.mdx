@@ -1,0 +1,182 @@
+---
+title: "Website Widgets"
+description: "Website Widgets allow visitors to start a Text Us conversation or real-time Live Chat with your team directly from your website."
+---
+
+Captivated Administrators can customize the widget's appearance, messaging, Channels, website placement, and more to match your organization's needs and branding.
+
+## Find Your Website Widgets
+
+To view or edit your Website Widgets:
+
+1. Select the **gear icon** in the bottom-left corner of Captivated.
+2. Go to **Administration**.
+3. Scroll to **Website Widgets**.
+4. Select the widget you want to manage.
+
+<Note>
+  If a widget is connected to a disabled Channel (phone number), Captivated will display a flag so you know it needs to be reassigned to an active Channel.
+</Note>
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/disabled-widget.png)
+
+## Customize Your Website Widget
+
+Each Website Widget includes several tabs for controlling its appearance and behavior.
+
+### Settings
+
+The **Settings** tab controls:
+
+- The Channel or Channels assigned to the widget
+- The website domains where the widget is allowed
+- How visitors choose between multiple Channels
+- Additional Live Chat settings, if Live Chat is enabled
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/settings-widget.png)
+
+### Channel Selection
+
+If your widget uses multiple Channels, **Channel Selection** determines how visitors choose where their conversation should go.
+
+You can choose:
+
+- **Select channels from a list** — Displays your available Channels as a standard list, such as departments or locations.
+- **Geo-location based search** — Allows visitors to find and select the location closest to them.
+
+We'll cover the Geo-location option in more detail below.
+
+### Custom Text
+
+Use the **Custom Text** tab to customize the messaging visitors see when they open your widget.
+
+Additional text options are available when Live Chat is enabled.
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/custom-text.png)
+
+### Design
+
+Use the **Design** tab to customize the appearance of your widget, including:
+
+1. Color
+2. Shape
+3. Size
+4. Placement on your website
+5. Button text
+6. Icon
+7. Whether **Live Chat** or **Text Us** appears on top
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/design.png)
+
+<Tip>
+  **Need inspiration?** Use your website's existing colors, fonts, and overall branding as a guide. Captivated Support can also help you create a widget that complements your website.
+</Tip>
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/Screenshot-2023-08-25-at-2.35.07-PM.png)
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/Screenshot-2023-08-25-at-2.38.28-PM.png)
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/Screenshot-2023-08-25-at-2.37.15-PM.png)
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/Screenshot-2023-08-25-at-2.40.36-PM.png)
+
+## Route Visitors to Their Nearest Location
+
+If your organization has multiple locations, your Website Widget can help visitors find and connect with the location closest to them.
+
+Each location is represented by a Captivated Channel and assigned a geographic location.
+
+### Set Up Location-Based Channel Selection
+
+1. Open your Website Widget.
+2. Go to **Settings**.
+3. Under **Channel Selection**, choose **Geo-location based search**.
+4. Once enabled, each Channel on the widget will display its associated location. Channels that haven't been configured yet will show **(no location)**.
+   4. Add the Channels you want available through the widget.
+   5. Select **Edit Location** next to a Channel.
+   You can set its location in one of two ways:
+   - **Find by Address** — Enter a street address or ZIP code to locate it automatically.
+   - **Manually Enter Coordinates** — Enter the latitude and longitude yourself.
+5. Repeat this process for each location you want included.
+6. Select **Save**.
+
+<Check>
+  At least **two Channels must have locations configured** for the nearest-location finder to appear. Channels without location information are excluded from location-based search results.
+</Check>
+
+### What Website Visitors See
+
+When a visitor selects **Text Us** or **Live Chat**, they'll be prompted to find the appropriate location.
+
+They can either:
+
+- Enter their **ZIP code**, or
+- Allow their browser or device to use their **current location**
+
+If location access is denied or unavailable, they can still search manually using a ZIP code.
+
+Visitors can choose a search radius of:
+
+- 10 miles
+- 25 miles
+- 50 miles
+- 100 miles
+
+Captivated displays matching locations from **nearest to farthest**, including the approximate distance to each location.
+
+The visitor selects a location, and their conversation is routed to that location's Captivated Channel.
+
+If there are no locations within the selected radius, they'll be prompted to expand their search.
+
+<Info>
+  The location finder works on both desktop and mobile web.
+</Info>
+
+## Live Chat Options
+
+If your organization has Live Chat enabled, additional Website Widget options are available.
+
+You can configure your Live Chat experience to support things such as:
+
+- **Live Chat hours** — Set specific times when Live Chat is available so your team is staffed and ready to respond.
+- **Departments or locations** — Allow visitors to select the appropriate team before starting their conversation.
+
+For Live Chat hours, create a [Queue](/administration/admin-queues) specifically for Live Chat and configure the appropriate availability.
+
+## Install Your Website Widget
+
+Once you're happy with your widget, open the **Installation** tab.
+
+This section provides the code and instructions needed to add the widget to your website.
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/installation-widget.png)
+
+If your organization uses Google Tag Manager, see our [Google Tag Manager integration guide](https://captivatedllc.mintlify.site/integrations/google-tag-manager) for additional installation instructions.
+
+## Test Your Widget Before Going Live
+
+Want to preview your widget before adding it to your website?
+
+Use the [Captivated Widget Tester](https://captivatedllc.github.io/captivated-chat-widget/) to test the experience.
+
+1. Open the **Installation** tab of your Website Widget.
+2. Copy the widget's installation code.
+3. Paste it into the Widget Tester.
+4. Select **Install Widget**.
+5. Test your Text Us, Live Chat, Channel selection, or location-based experience.
+
+<Tip>
+  Refresh the Widget Tester page before testing a different widget.
+</Tip>
+
+![](https://learn.captivated.works/wp-content/uploads/2023/08/Screenshot-2025-08-20-at-9.46.36%20AM-594x1024.png)
+
+This can be especially helpful when testing **Geo-location based search** to make sure ZIP code searches, location permissions, search radius, and routing behave as expected.
+
+## Additional Widget Documentation
+
+For additional technical Website Widget documentation, view the [Captivated Widget Documentation](https://api.captivated.works/docs/widget).
+
+## Need Help?
+
+Need assistance designing, configuring, or installing your Website Widget? Contact **Captivated Support** using the **Support** option in the left-hand menu or text **317.316.3600**.

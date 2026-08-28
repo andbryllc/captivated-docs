@@ -1,0 +1,354 @@
+---
+title: "Announcements"
+description: "Announcements allow you to send the same message to multiple contacts at once while keeping each recipient's conversation private."
+---
+
+## Video Walkthrough
+
+<iframe src="https://play.vidyard.com/9MFr9cbC3bKUdVRcSXLvEo.html" width="640" height="360" frameborder="0" allowfullscreen />
+
+Unlike a group text, recipients **cannot see who else received the Announcement or view other recipients' replies**. Any replies return to Captivated as individual conversations.
+
+<Danger>
+  **Before you send:** Announcements can reach a large number of contacts very quickly. Always carefully review your **selected recipients, tags, estimated recipient count, message content, and message segment count** before sending. **Once an Announcement begins sending, it cannot be unsent or recalled.**
+</Danger>
+
+## Access Announcements
+
+There are two ways to start a new Announcement:
+
+1. Select **Announcements** from the Messages menu and create a new Announcement.
+2. Select the green **New Message** button and choose the option to create an Announcement.
+
+If you don't see the Announcements feature, contact Captivated Support. Announcement access may need to be enabled for your organization and individual Users.
+
+<Note>
+  Tags are an organizational and audience-building tool. A Tag does **not**, by itself, indicate that a contact has consented to receive marketing or promotional messages.
+</Note>
+
+## Select Your Recipients
+
+The first step is deciding who should receive your Announcement.
+
+You can build your audience using:
+
+- **Select Tags** — Build an audience using Tags assigned to your contacts.
+- **Select Contacts** — Search for and select specific contacts individually.
+- **A combination of both** — Use Tags to build your larger audience and individual Contacts as needed.
+
+As you make your selections, Captivated automatically calculates your audience.
+
+<Danger>
+  **Double-check your audience.** Selecting the wrong Tag can potentially add a large number of unintended recipients. Don't rely on the Tag name alone—make sure you understand who is included in the Tag before sending
+</Danger>
+
+## Select Recipients Using Tags
+
+Under **Select Tags**, you can choose who should be included in your audience and who should be excluded.
+
+### Include Contacts With These Tags
+
+Use **Include contacts with these tags** to select the Tags belonging to contacts you want to receive the Announcement.
+
+### Exclude Contacts With These Tags
+
+Use **Exclude contacts with these tags** to remove contacts from your selected audience.
+
+<Info>
+  **Exclusions always take priority.**
+</Info>
+
+If a contact matches both an Include Tag and an Exclude Tag, that contact will be **excluded** from the Announcement.
+
+Think of it as:
+
+**Included Contacts − Excluded Contacts = Announcement Audience**
+
+For example:
+
+- **Include:** `Current Customers`
+- **Exclude:** `Service Paused`
+
+A contact with both `Current Customers` and `Service Paused` will **not** receive the Announcement.
+
+<Danger>
+  **Pay careful attention to Exclude Tags.** Before continuing, review both your Include and Exclude selections. An incorrect Include Tag could send your message to unintended contacts, while an incorrect Exclude Tag could prevent intended recipients from receiving it.
+</Danger>
+
+## Match Any vs. Match All
+
+When two or more Tags are selected within the Include or Exclude section, you can choose **Match Any** or **Match All**.
+
+| Setting | How It Works |
+| :-- | :-- |
+| **Match Any** | A contact only needs to have one of the selected Tags to match. This generally creates a broader audience. |
+| **Match All** | A contact must have every selected Tag to match. This generally creates a narrower audience. |
+
+Include and Exclude criteria work independently, so each section can have its own Match Any or Match All selection.
+
+<Check>
+  **Check your recipient count after changing Match Any or Match All.** Switching between these options can significantly change the size of your audience.
+</Check>
+
+## Advanced Targeting
+
+Need a more complex audience? Select **Use advanced builder**.
+
+Advanced Targeting allows you to create more specific Tag combinations using:
+
+- **Any of these**
+- **All of these**
+- **Not this**
+
+You can also create nested groups when your audience requires multiple layers of criteria.
+
+For most Announcements, the standard **Include/Exclude Tags** and **Select Contacts** options will be the simplest way to build an audience.
+
+## Select Individual Contacts
+
+Choose **Select Contacts** to select recipients individually.
+
+Search for contacts by **name or phone number** and select the contacts you'd like to include.
+
+This can be used on its own or in combination with your Tag selections.
+
+## Review Your Recipient Counts
+
+As you build your audience, Captivated displays three boxes to help you understand who will receive the Announcement:
+
+| Count | What It Means |
+| :-- | :-- |
+| **Contacts Selected** | The number of contacts matching your audience selections. |
+| **Non-Deliverables** | Selected contacts who cannot currently receive the message. |
+| **Estimated Recipients** | The estimated number of contacts who will receive your Announcement. |
+
+<Warning>
+  **Do not skip this step.**
+</Warning>
+
+Before composing or sending your Announcement, ask yourself:
+
+- Does **Contacts Selected** make sense based on the Tags or Contacts I chose?
+- Are there unexpected **Non-Deliverables**?
+- Is **Estimated Recipients** approximately how many people I intended to reach?
+
+<Warning>
+  If you expected to reach 50 contacts and Captivated shows 500 Estimated Recipients, **stop and review your selections before continuing.** Your recipient count is one of the easiest ways to catch an incorrectly selected Tag before a message is sent.
+</Warning>
+
+## Compose Your Announcement
+
+Once you've confirmed your audience, you can compose your message.
+
+Add an optional **Title** to make the Announcement easier to identify later.
+
+You can then either:
+
+- Type a new message directly into the message field, or
+- Select a previously created [Template](/features/templates).
+
+To personalize your message, use available Merge Fields such as `{{salutation}}`.
+
+You can also choose whether to **Include your signature** at the end of the message.
+
+<Warning>
+  **Review Merge Fields carefully.** Make sure the contacts in your audience have the necessary information populated for any Merge Fields included in your message.
+</Warning>
+
+## Add Attachments
+
+Use the **attachment** option to include supported images, documents, or other files.
+
+If you're sending an image via MMS, keeping the file around **500 KB or less** can help improve compatibility and deliverability across carriers and devices.
+
+When attaching a document, use a short, recognizable file name that helps the recipient understand what they're opening.
+
+Learn more about [Sending Attachments](/features/sending-attachments).
+
+## Review Your Character and Segment Count
+
+As you compose your Announcement, Captivated displays your **Estimated Character Count** and information about how your message will be segmented.
+
+<Warning>
+  Pay careful attention to these boxes before sending.
+</Warning>
+
+SMS messages are billed and counted by **message segment**, not simply by the number of recipients.
+
+Standard-character SMS messages can contain up to **160 characters in the first segment**. Longer messages are divided into additional segments. Emojis and certain special characters can change the message's encoding, resulting in fewer characters fitting into each segment.
+
+Captivated will alert you to this as you compose your message.
+
+### Why Segment Count Matters
+
+Every segment is sent to every recipient.
+
+For example, if you send an Announcement to 500 recipients:
+
+| Message Length | Approximate Usage |
+| :-- | :-- |
+| 1 segment | 500 segments |
+| 2 segments | 1,000 segments |
+| 3 segments | 1,500 segments |
+
+A small increase in message length can therefore make a significant difference when sending to a large audience.
+
+<Warning>
+  **Check both numbers together:** Always review your **Estimated Recipients AND message segments**. A multi-segment message sent to a large audience can use a significant number of messages from your plan.
+</Warning>
+
+As a best practice, keep Announcements concise and generally aim for **one to two segments when practical**. 
+
+<Tip>
+  Use this [segment calculator](https://twiliodeved.github.io/message-segment-calculator/) to confirm segment count before sending.
+</Tip>
+
+## Select Your Sending Channel
+
+Under **From Channel**, select the Captivated Channel you'd like the Announcement to be sent from.
+
+Make sure you're sending from the **correct Channel and phone number**, particularly if your organization has multiple locations, departments, or texting numbers.
+
+Captivated will also display an **Estimated Send Time** based on your Announcement and selected audience.
+
+Larger Announcements may take time to complete based on audience size, message type, carrier throughput, and other messaging factors.
+
+## Confirm Messaging Requirements
+
+Before sending or scheduling your Announcement, Captivated requires you to acknowledge the messaging requirements displayed on the page.
+
+By enabling the acknowledgment, you are confirming that your message complies with Captivated's Terms and Conditions and applicable messaging requirements.
+
+<Danger>
+  **Announcements should never be used for spam or mass marketing to contacts who have not provided the appropriate consent.** Accounts that engage in prohibited messaging may be subject to messaging restrictions or suspension.
+</Danger>
+
+## Final Review Before Sending
+
+Before selecting **Send**, stop and review your Announcement one final time.
+
+**Verify all of the following:**
+
+1. **Audience** — Did I select the correct Tags and/or Contacts?
+2. **Exclusions** — Did I exclude everyone who should not receive this message?
+3. **Estimated Recipients** — Does this number make sense?
+4. **Message** — Is the wording, spelling, and information correct?
+5. **Merge Fields** — Will personalization populate correctly?
+6. **Links & Attachments** — Are they correct and working?
+7. **Segments** — Am I comfortable with the message usage based on my recipient count?
+8. **Channel** — Am I sending from the correct phone number?
+9. **Consent** — Are these contacts eligible to receive this type of message?
+10. **Timing** — Is this an appropriate time for recipients to receive the message?
+
+<Warning>
+  There is **no undo button**. Once an Announcement begins sending, it cannot be unsent, recalled, or stopped. Review everything carefully before selecting Send.
+</Warning>
+
+## Preview Your Announcement
+
+Select **Preview** to review your Announcement before sending.
+
+Depending on the Merge Field, the preview may display the Merge Field placeholder rather than an individual contact's populated value. The appropriate value will populate when the Announcement is sent.
+
+For important or large Announcements, consider sending a test message to yourself or a small internal group first to confirm that the message, links, and attachments appear as expected.
+
+## Send Now or Schedule for Later
+
+When you're ready, choose:
+
+- **Send** — Begin sending the Announcement immediately.
+- **Schedule** — Schedule the Announcement to send at a future date and time.
+
+### Sending Immediately
+
+Once you select **Send** and the Announcement begins processing, **it cannot be unsent or recalled**.
+
+### Scheduling an Announcement
+
+If you don't want the Announcement to send immediately, select **Schedule** and choose a future date and time.
+
+Scheduled messages can be managed before they're sent.
+
+Learn more about [Scheduling Messages](/features/scheduling-a-message).
+
+<Check>
+  Scheduling can give you additional time to review planned communications before they are sent, but you should still complete the same audience, content, segment, and compliance checks before scheduling.
+</Check>
+
+## After Sending an Announcement
+
+Once an Announcement has been sent, Captivated displays information about the send, including messages sent and messages that failed.
+
+You can also download available Announcement data to a CSV for additional review.
+
+Recipients' replies return to Captivated as **individual conversations**. Recipients do not see one another or anyone else's responses.
+
+## FAQs
+
+<Accordion title="Can I unsend an announcement? I made an error and sent the wrong message or to the wrong group.">
+  **No.** Once an Announcement begins sending, it cannot be unsent, recalled, or stopped.
+
+  This is why it's extremely important to review your **Tags, Contacts, Estimated Recipients, message content, attachments, segment count, and sending Channel before selecting Send**.
+
+  If an Announcement is scheduled for the future and has not yet begun sending, you can manage the scheduled messages before their scheduled send time.
+
+  Learn more about [Scheduling Messages](/features/scheduling-a-message).
+</Accordion>
+
+<Accordion title="How do I make sure I'm sending to the right people?">
+  Review your **Include Tags, Exclude Tags, individual Contacts, and Estimated Recipients** before sending.
+
+  The Estimated Recipients count is especially useful for identifying mistakes. If the number is significantly higher or lower than you expected, review your audience selections before continuing.
+</Accordion>
+
+<Accordion title="What happens if a contact has both an Include Tag and an Exclude Tag?">
+  The contact is **excluded**.
+
+  Exclude Tags always take priority, so the audience is essentially:
+
+  **Include − Exclude = Final Audience**
+</Accordion>
+
+<Accordion title="What's the difference between Match Any and Match All?">
+  **Match Any** means a contact needs at least one of the selected Tags.
+
+  **Match All** means a contact needs every selected Tag.
+
+  Changing this setting can significantly affect your recipient count, so always review **Estimated Recipients** after making a change.
+</Accordion>
+
+<Accordion title="How many recipients can I send an Announcement to?">
+  The number of recipients your organization can reach may depend on your Captivated configuration, messaging registration, carrier throughput, and other factors.
+
+  Large Announcements can take time to complete. Review the **Estimated Send Time** displayed in Captivated before sending.
+</Accordion>
+
+<Accordion title="How many messages from my plan does an Announcement use?">
+  Message usage is based on the number of **SMS segments sent to each recipient**.
+
+  For example, a two-segment Announcement successfully sent to 100 recipients uses approximately **200 SMS segments**.
+
+  Because of this, always review both your **message segment information and Estimated Recipients** before sending.
+</Accordion>
+
+<Accordion title="Do recipients see other recipients or their replies?">
+  No. Announcements are not group texts.
+
+  Each recipient receives the message separately, and any response returns to Captivated as an individual conversation.
+</Accordion>
+
+<Accordion title="Can I send another message from an existing Announcement?">
+  Announcements are designed as individual sends rather than ongoing group conversations.
+
+  If you need to communicate with the same audience again, create a new Announcement. Using [Tags](/features/tagging-contacts) makes it easier to recreate commonly used audiences.
+</Accordion>
+
+<Accordion title="Can I send a group text where everyone sees each other's replies?">
+  Yes, that is a group message and is separate from an announcement.
+</Accordion>
+
+## Need Help?
+
+If you're unsure about your audience, Tag selections, message segments, or Announcement setup, **contact Captivated Support before sending**.
+
+You can reach Captivated Support using the **Support** option in Captivated or text **317.316.3600**.

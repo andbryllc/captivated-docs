@@ -1,123 +1,275 @@
 ---
 title: "Templates"
-description: "Create, share, send, edit, and archive templates to quickly send personalized messages to your contacts."
+description: "Create reusable messages, personalize them with Merge Fields, share Templates with your team, and quickly send consistent responses to customers."
 ---
 
-## Creating a Template Video Walkthrough
+Message Templates help your team save time and provide consistent responses without typing the same message over and over.
 
-<iframe src="https://play.vidyard.com/LdKawWwSDKhoW5kcPPgpre.html" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+Templates can include:
 
-## Creating a Template Step by Step Instructions
+- Text
+- Merge Fields
+- Fill-in-the-blank fields
+- Attachments
+- Captivated features such as Forms, payment requests, booking requests, and more
 
-There are two ways to create a new template:
+## Create a Template
 
-1. Via the templates tab under conversations
-2. On the fly within a write a message field, using the three dot menu
+There are two ways to create a new Template:
 
-First let's start with option one. To create a new template, navigate to templates within the conversation tab and hit the plus icon in the top right.
+1. Create one from the **Templates** section.
+2. Save a message as a Template while you're writing it.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2025-07-18-at-3.28.33%20PM.png)
+### Creating a Template Video Walkthrough
 
-Title your template something easy to recall as the title of the template will be how you can quickly find and use the template in the write a message field.
+<iframe src="https://play.vidyard.com/LdKawWwSDKhoW5kcPPgpre.html" width="640" height="360" frameborder="0" allowfullscreen />
 
-Make sure to utilize our smart merge fields to personalize your templates. Click on merge fields and then hit the copy icon to paste the smart merge field into your template. We recommend using `{{salutation}}` to address your contact by first name.
+### Create a Template from the Templates Section
 
-You can also put any other word in double curly brackets to make it a fill-in-the-blank. You will know these fields were successfully created because the word will show in blue in the preview section.
+1. Open **Conversations \> Templates**.
+2. Select the option to add a new Template.
+3. Give your Template a descriptive name.
+4. Enter your message.
+5. Add Merge Fields, fill-in-the-blank fields, or attachments as needed.
+6. Save your Template.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2025-07-18-at-3.30.26%20PM.png)
+<Tip>
+  Give Templates simple, recognizable names. Users can search for Templates by name when composing a message, so names such as **Appointment Reminder**, **Payment Follow-Up**, or **Service Complete** are easier to find than generic names.
+</Tip>
 
-You can add attachments to your template that will be included when you send the template as a text. Any attachment from your device can be added such as .png, .jpg, .docx, .csv, .pdf, etc.
+## Personalize and Manage Templates with Fields
 
-You can also add these Captivated features to your templates as well:
+Captivated offers several types of fields that make Templates easier to personalize and maintain.
 
-- [contact exchange request](/features/contact-exchange-request)
-- [payment request](/features/express-pay)
-- [Google review request](/premium-features/google-review-requests)
-- [booking request](/integrations/scheduling)
-- [location request](/premium-features/requesting-a-location)
-- [form request](/premium-features/requesting-a-form)
+Depending on what you're trying to accomplish, you can use **Merge Fields, Data Fields, or Fill-in-the-Blank Fields**.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2025-07-18-at-3.31.48%20PM.png)
+### Merge Fields
 
-Note: The "Safe to send without having full consent" toggle is an administrative setting. If your account has a compliance profile in place that is using safe templates, administrators can adjust this toggle to add a template to the account's list of safe templates.
+**Merge Fields** automatically insert information that is specific to the contact, User, or another connected data source.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2025-07-18-at-3.32.45%20PM.png)
+For example:
 
-Now, let's review how to create a template on the fly, or option two.
+> Hi \{\{salutation\}\}, we're looking forward to seeing you!
 
-If you find yourself consistently typing the same response to a customer, you can also create a template on the fly. Just hit the three dot menu, and then save as template.
+When the Template is used, `{{salutation}}` is automatically replaced with the appropriate information for that contact.
+
+Depending on your Captivated setup, Merge Fields may include contact information, User information, [Custom Fields](/features/custom-fields), or information from integrated systems.
+
+### Data Fields
+
+**Data Fields** store one shared value that can be used across multiple Templates.
+
+Unlike a Merge Field, the value does **not change based on the contact**. The same value is inserted anywhere that Data Field is used.
+
+For example, if your business uses the same scheduling link in several Templates, you could create a Data Field:
+
+> \{\{scheduling\_link\}\}
+
+Set the value of that Data Field to your current scheduling URL, then use `{{scheduling_link}}` anywhere you need it.
+
+If your scheduling link changes later, simply **update the Data Field once**. Every Template using that Data Field will automatically use the new value—there's no need to find and edit each Template individually.
+
+Data Fields are especially useful for information such as:
+
+- Business hours
+- Scheduling links
+- Payment links
+- Website URLs
+- Office addresses
+- Support phone numbers
+- Pricing or standard fees
+- Promotional codes
+
+<Tip>
+  If the same piece of information appears in multiple Templates and may change in the future, use a Data Field instead of typing the value directly into every Template.
+</Tip>
+
+### Fill-in-the-Blank Fields
+
+**Fill-in-the-Blank Fields** are used when information needs to be entered manually each time a Template is sent.
+
+To create one, place your desired field name inside double curly brackets.
+
+For example:
+
+> Your technician should arrive between \{\{arrival\_time\}\}.
+
+When a user selects the Template, Captivated will prompt them to enter the arrival time before sending the message.
+
+## Which Field Should I Use?
+
+Here's an example that uses all three:
+
+> Hi \{\{salutation\}\}, your appointment is scheduled for \{\{appointment\_time\}\}. If you need to make a change, visit \{\{scheduling\_link\}\}.
+
+In this Template:
+
+| Field | Type | Why |
+| :-- | :-- | :-- |
+| `{{salutation}}` | **Merge Field** | Automatically changes based on the contact receiving the message. |
+| `{{appointment_time}}` | **Fill-in-the-Blank Field** | The sender enters the appropriate appointment time before sending. |
+| `{{scheduling_link}}` | **Data Field** | Uses the same scheduling link across Templates and can be updated in one place. |
+
+A simple way to remember the difference:
+
+**Merge Field = unique to the contact**<br />**Data Field = one value shared across Templates**<br />**Fill-in-the-Blank = entered each time you send**
+
+<Tip>
+  Always review your Template before sending to make sure Merge Fields populated correctly, Data Fields contain current information, and Fill-in-the-Blank Fields have been completed.
+</Tip>
+
+## Add Attachments to a Template
+
+You can include attachments with Templates when your team regularly sends the same file or media.
+
+Supported attachments may include common file types such as images, PDFs, and documents.
+
+When the Template is selected, the attachment will be included with the message.
+
+<Tip>
+  Periodically review Templates containing attachments to make sure the file is still accurate and current.
+</Tip>
+
+## Add Captivated Features to a Template
+
+Templates can also include certain Captivated actions and requests, allowing your team to quickly send frequently used workflows.
+
+Depending on the features available to your account, you may be able to add:
+
+- [Contact Exchange Requests](/features/contact-exchange-request)
+- [Payment Requests](/features/express-pay)
+- [Google Review Requests](/premium-features/google-review-requests)
+- [Booking Requests](/integrations/scheduling)
+- [Location Requests](/premium-features/requesting-a-location)
+- [Forms](/premium-features/requesting-a-form)
+
+This is especially useful when your team regularly sends the same request with similar accompanying language.
+
+## Create a Template While Writing a Message
+
+If you find yourself repeatedly typing the same response, you can save it as a Template without leaving the conversation.
+
+1. Draft your message.
+2. Open the **three-dot menu**.
+3. Select **Save as Template**.
+4. Give the Template a recognizable name.
+5. Save it.
+
+The message will then be available for future conversations.
 
 ![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2023-08-31-at-12.24.15-PM.png)
 
-Name your template and make sure to hit save.
+## Share a Template
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2023-08-31-at-12.25.46-PM.png)
+When you create a Template, it is automatically available to you.
 
-## Sharing a Template Video Walkthrough
+You can also share it with individual Users or entire Teams.
 
-<iframe src="https://play.vidyard.com/hzbjEjew6mUGQSnxPt8GLz.html" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+1. Open the Template.
+2. Select **Share**.
+3. Choose the Users or Teams who should have access.
+4. Decide whether they should also have **Write Access**.
+5. Save your changes.
 
-## Sharing a Template Step By Step Instructions
+<Tip>
+  Limit Write Access to users who should be responsible for maintaining shared Templates. This helps prevent accidental changes to messages used across your organization.
+</Tip>
 
-Once you save the template, the template is automatically shared with you, the creator. If you'd like to share this with another [user](/administration/admin-users) or [team](/administration/admin-teams), hit the share icon and choose the user(s) or team(s) and decide if you'd like to give them the ability to edit the template with "write access".
+### Sharing a Template Video Walkthrough
 
-The purple icon indicates a team, and a user will either be their picture if it has been added or a blue circle with the user's initials.
+<iframe src="https://play.vidyard.com/hzbjEjew6mUGQSnxPt8GLz.html" width="640" height="360" frameborder="0" allowfullscreen />
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2025-07-18-at-3.34.15%20PM.png)
+## Send a Template
+
+From an open conversation, you can find and use an available Template from the message field.
+
+You can either:
+
+- Open the Template selector and choose a Template.
+- Begin typing the Template's name to search for it.
+
+Once you've selected a Template:
+
+1. Complete any fill-in-the-blank fields.
+2. Review populated Merge Fields.
+3. Review the entire message.
+4. Make any necessary adjustments.
+5. Send when ready.
+
+<Warning>
+  Always review a Template before sending it. Pay particular attention to names, Merge Fields, dates, links, attachments, and manually entered information.
+</Warning>
 
 ## Sending a Template Video Walkthrough
 
-<iframe src="https://play.vidyard.com/8HKRtpkUw6quctcMyLK8Cm.html" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-
-## Sending a Template Step by Step Instructions
-
-There are a couple of ways to find and send a template in a message thread you currently have open:
-
-1. using the white sheet of paper
-2. typing the title of the template in the write a message field and hitting the blue template that pops up
-
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2023-08-31-at-12.06.04-PM.png)
-
-Select your template and then fill in the appropriate blanks. Hit "continue" and the message will populate into the write a message field and you can then choose to hit "send" when you're ready. Or you can hit "send" from this modal window and it will send immediately. If you didn't intend to send a template at all, just hit "cancel".
-
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2024-04-24-at-1.55.19%20PM.png)
-
-You can also find a pre-existing template you'd like to send by simply typing the title of the template in the write a message field. Any template that matches the words input will pull up. Select the template you'd like to send.
-
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2023-08-31-at-12.11.27-PM.png)
-
-Please review the template to make sure there are no typos and when you're ready to send it, hit "send".
-
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2023-08-31-at-12.13.24-PM.png)
+<iframe src="https://play.vidyard.com/8HKRtpkUw6quctcMyLK8Cm.html" width="640" height="360" frameborder="0" allowfullscreen />
 
 ## View and Edit Templates
 
-To view all the templates, navigate to the templates section. At the top, you can choose how many templates to show at a time. The search bar allows you to quickly find a template using key words. You can also filter by "active", "archived" or "all" templates to narrow your search. Finally, there is a filter for template owner.
+Open **Conversations \> Templates** to manage your Template library.
 
-Use the carets in the header row to sort each column ascending vs descending.
+From here, you can search and filter Templates to find the one you need.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2024-04-24-at-1.47.27%20PM.png)
+Select a Template to review its content, sharing permissions, or other available settings.
 
-To edit a template, simply click on the blue hyperlinked template name. From that screen, you can hit "edit" this template or "archive this template".
+Keeping your Template library organized makes it easier for users to find the correct response and reduces the chance of outdated Templates being used.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2025-07-18-at-3.35.26%20PM.png)
+## Archive a Template
 
-## Archiving a Template
+If a Template is no longer being used, archive it rather than leaving it in your active Template library.
 
-Archive a template to remove it from your active templates view. This allows you to keep a clean list of templates you currently utilize, but also allows you to archive a template you no longer use. Once archived, you can always revert it back to active if you decide to use it again.
+Archiving removes the Template from your active list without permanently deleting it.
 
-To archive a template, first navigate to the conversations tab, then select "templates". Hit the check box to the left of the name of the template(s) you would like to archive. Each template selected will highlight the row in blue. Once you have selected a template, the archive button will appear in the top right.
+To archive a Template:
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2024-04-24-at-2.00.02%20PM.png)
+1. Open **Conversations \> Templates**.
+2. Locate the Template you no longer need.
+3. Select the Template.
+4. Choose **Archive**.
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2024-04-24-at-2.01.58%20PM.png)
+Archived Templates can be viewed using the **Archived** filter.
 
-View all of your archived templates by using the "archived" filter. Each archived template will have a yellow tag indicating that they have been archived. To restore an archived template so that it can be used again, just select the checkbox to the left of the title and then the "restore" button will populate in the top right.
+## Restore an Archived Template
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2024-04-24-at-2.03.11%20PM.png)
+If you need to use an archived Template again:
 
-![](https://learn.captivated.works/wp-content/uploads/2018/01/Screenshot-2024-04-24-at-2.07.02%20PM.png)
+1. Filter your Template list to **Archived**.
+2. Select the Template.
+3. Choose **Restore**.
+4. Review the Template content and sharing permissions before using it again.
 
-Once restored, you will find that template back in the active template filter. Make sure to review sharing permissions in case anything has changed. To learn how to share a template, scroll back up on this page to find the sharing a template walkthrough.
+<Tip>
+  **Best Practice:** If a Template has been archived for some time, review its wording, links, attachments, Merge Fields, and compliance language before restoring it.
+</Tip>
 
-Questions? You can chat with Captivated Support via the left-hand menu or text Captivated Support at 317.316.3600.
+## Safe Templates & Compliance Settings
+
+Some Captivated accounts use compliance settings that allow Administrators to designate certain Templates for specific messaging workflows.
+
+If available on your account, Administrators may see a **Safe to Send** setting when creating or editing a Template.
+
+This setting works with your organization's Captivated compliance configuration and should only be enabled for Templates that meet the requirements established for that messaging workflow.
+
+<Info>
+  A Template setting does not replace applicable consent or messaging requirements. Your organization is responsible for ensuring messages are appropriate for the recipient and the intended use.
+</Info>
+
+If you're unsure whether a Template should be designated as safe, contact Captivated Support before changing the setting.
+
+## Template Best Practices
+
+- Give Templates clear, searchable names.
+- Keep messages concise and conversational.
+- Use Merge Fields to personalize messages when appropriate.
+- Use fill-in-the-blank fields for information that changes with each send.
+- Review messages before sending, even when using a Template.
+- Limit Write Access for important organization-wide Templates.
+- Archive Templates your team no longer uses.
+- Periodically review shared Templates for outdated information, links, attachments, or language.
+- Be especially careful when using Templates for large [Announcements](/features/announcements).
+
+## Need Help?
+
+If you need help creating, sharing, or managing Templates, contact **Captivated Support** using the in-app **Support** option or text **(317) 316-3600**.
+
+Name your template and make sure to hit save.

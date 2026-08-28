@@ -1,132 +1,206 @@
 ---
-title: "Users"
-description: "Add and manage users in Captivated, including role permissions, teams, queues, contact cards, and restoring deleted users."
+title: "Managing Users"
+description: "Add and manage Captivated users, assign account permissions, manage Team and Queue access, and update user settings."
 ---
+
+## Add a New User
+
+To add a user:
+
+1. Select the **gear icon** to open Administration.
+2. Select **Users**.
+3. Select **Add User**.
+4. Enter the user's **work email address**.
+5. Select **Create a new user account for \[email address\]**.
+6. Enter the user's first and last name.
+7. Select the appropriate **Role**.
+8. Enter the user's personal mobile number.
+9. Review any additional settings and select **Save**.
+
+Once created, the user will receive an email invitation to finish setting up their Captivated account.
+
+<Tip>
+  Use the user's work email address when creating their account. Their email address becomes their Captivated username and may also appear on their Contact Card.
+</Tip>
 
 ## Add a New User Video Walkthrough
 
 ![](https://play.vidyard.com/mx9ZwBJXPtNrJEwNzY9rBx.jpg)
 
-## Add a New User Step by Step Instructions
+## Account Roles & Permissions
 
-To add a new user, navigate to the users tile then select 'Add User'.
+Each user is assigned an account-level Role that determines what they can access within Captivated.
 
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-07-at-3.24.24%20PM.png)
+| Role | Access |
+| :-- | :-- |
+| **Administrator** | Highest level of access. Administrators can access Administration, manage users, Teams, Queues, billing information, and other account configuration settings. |
+| **Manager** | Can view conversations across the organization, including conversations they did not initiate and are not participating in, by changing their [conversation filter](/features/conversation-filtering-and-searching) from **Mine** to **Everyone**. |
+| **Member** | Can only view conversations they initiate or are joined to. Changing the conversation filter to **Everyone** does not provide access to additional conversations. |
 
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-07-at-3.26.05%20PM.png)
+<Check>
+  Account Roles are different from Team Roles, Queue Operators, and Channel access. Each controls a different type of permission within Captivated.
+</Check>
 
-You will be prompted to first add their email address. The email address input will become their user name and be shown on their contact card. Best practice is to use their work email address. Once you have entered their email address, please select "create a new user account for"
+### Choosing the Right Role
 
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-07-at-3.28.53%20PM.png)
+Give users only the level of access they need to perform their job.
 
-Enter their first and last name and choose their **role permission (manager, member or administrator) by selecting the role drop-down.**
+- Use **Member** for users who only need access to their own conversations.
+- Use **Manager** for supervisors or leaders who need visibility across conversations.
+- Use **Administrator** only for users who need access to account configuration and administrative settings.
 
-There are three role permissions:
+## Personal Mobile Number
 
-1. **Administrator** – has access to the administration section (gear icon), meaning they can see billing, add users/teams/queues and can request and make changes to the account configuration. Highest level of access.
-2. **Manager** – can see conversations across the entire organization when changing their [conversation filter](/features/conversation-filtering-and-searching) from "mine" to "everyone". This includes conversations they did not start and are not joined to.
-3. **Member** – can only see conversations they initiate or are joined to**.** No change happens when switching their conversation filter from "mine" to "everyone". Lowest level of access.
+Enter the user's **personal mobile number**, not your business landline or VoIP number.
 
-Also, make sure to enter their **personal** cell phone number. Do not enter the business landline/VOIP here. **NOTE: this personal cell number field will not be shared with any contact.** It is used for our click to call feature. Learn more about [outbound calling](/features/outbound-calling) here.
+The user's personal mobile number is **not shared with customers**. Captivated may use it for features such as [outbound calling](/features/outbound-calling) and account security
 
-Then hit the double carrot to open up the Advanced Settings. Advanced Settings are only available to an administrator to edit.
+## Advanced Settings
 
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-07-at-3.34.31%20PM.png)
+Administrators can expand **Advanced Settings** when creating or editing a user to manage additional permissions and preferences.
 
-To learn more about the advanced settings navigate to these pages:
+Depending on your account configuration, these settings may include access to features such as:
 
-– [Two-Factor Authentication](/integrations/two-factor-authentication-2fa)
+- [Two-Factor Authentication](/integrations/two-factor-authentication-2fa)(2FA)
+- [Announcements](/features/announcements)
+- [Internal Announcements](/premium-features/team-chat)
+- [Contact Imports](/features/importing-contacts)
+- [Template Creation](/features/templates)
+- [Signature preferences](https://app.mintlify.com/captivatedllc/captivatedllc/~/862dc549-3f68-4815-9f1e-72d262beb17a)
+- [Notification settings](https://app.mintlify.com/captivatedllc/captivatedllc/~/f345bf3f-9f7d-438f-bce7-a3a90bc6fd93)
+- [Time zone and working hours](https://app.mintlify.com/captivatedllc/captivatedllc/~/862dc549-3f68-4815-9f1e-72d262beb17a)
 
-– [Announcements](/features/announcements)
+<Note>
+  Users can manage many of their own notification and availability preferences later from [**My Profile**.](https://app.mintlify.com/captivatedllc/captivatedllc/~/862dc549-3f68-4815-9f1e-72d262beb17a)
+</Note>
 
-– [Internal Announcements](/premium-features/team-chat)
+## User Invitations
 
-– [Contact Import](/features/importing-contacts)
+When a new user is created, Captivated sends an email invitation with instructions for setting up their account and **creating** a password.
 
-– [Template creation](/features/templates)
+### Resend an Invitation
 
-The default signature will append as such: First Name ~ Organization Name and will append to the initial outbound message. Feel free to adjust those signature settings as needed in this section.
+If the user can't find their original invitation, an Administrator can send another one from the user's record.
 
-Under Notification Settings, you can choose the time zone and working hours.
+Have the user look for an email indicating that your organization has invited them to join Captivated. 
 
-Notification settings can be adjusted at any time by the user in their [My Profile](/getting-started/setting-up-my-profile) section.
+<Note>
+  A new user must complete their initial account setup **using their invitation** before using the standard password reset process.
+</Note>
 
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-07-at-3.40.36%20PM.png)
+## Reset a User's Password
 
-Once you have added the user, they will show in the list of users. You'll notice each User's role is listed in the first column – if that User has access to send [announcements](/features/announcements), then you will see the megaphone icon next to the User's role.
+Administrators can send a password reset email from the user's record.
 
-To the right of the User's role, you'll see the User's current status (green means the user is online and red indicates the user is offline.
+Existing users can also reset their own password from the Captivated login page by selecting **Forgot Password**.
 
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-07-at-3.46.56%20PM.png)
+## Manage an Existing User
+
+To manage a user:
+
+1. Open **Administration \> Users**.
+2. Select the user's name.
+
+From the user's record, Administrators can manage their basic information, account access, Teams, Queues, Contact Card, and other available settings.
+
+## Add a User to a Team
+
+Open the [**Teams**](https://app.mintlify.com/captivatedllc/captivatedllc/~/fb7c6b33-6dac-4e56-b948-6e640c1b813b) tab within the user's record to see the Teams they currently belong to and their role within each Team.
+
+From here, you can:
+
+- Add the user to another Team.
+- Change their Team Role.
+- Remove them from a Team.
+
+<Note>
+  A user's **Team Role** is separate from their account-level Administrator, Manager, or Member Role.
+</Note>
+
+Learn more about [Managing Teams](/administration/admin-teams).
+
+## Add a User as a Queue Operator
+
+Open the **Queues** tab to see which Queues the user currently monitors as an Operator.
+
+From here, you can:
+
+- Add the user as an Operator of another Queue.
+- Remove them as a Queue Operator.
+- Manage Preview Access, when available.
+
+**Preview Access** allows a Queue Operator to view an incoming conversation before taking ownership of it.
+
+Learn more about [Managing Queues](/administration/admin-queues).
+
+## Manage a User's Contact Card
+
+Open the **Contact Card** tab to review the information that will be shared when the user sends their Contact Card to a customer.
+
+Administrators can update available Contact Card information from the user's record.
+
+Learn more about [Contact Cards](/features/sending-your-contact-card).
+
+## Remove a User From an Account
+
+If your organization contains multiple Captivated accounts, you may have the option to remove a user from a specific account without deleting them from the entire organization.
+
+Use **Remove From Account** when the user should retain access to the organization but no longer needs access to the current account.
+
+## Delete a User
+
+Use **Delete User** when someone should no longer have access to your Captivated organization.
+
+Deleted users lose access to Captivated but can be restored later if needed.
+
+<Warning>
+  Review any additional options presented when deleting a user to ensure their conversations and responsibilities are handled appropriately.
+</Warning>
+
+## Restore a Deleted User
+
+To restore a previously deleted user:
+
+1. Open **Administration \> Users**.
+2. Filter the user list to **Removed** users.
+3. Locate the user you'd like to restore.
+4. Select **Actions \> Restore Deleted User**.
+5. Review the user's permissions and access after restoring them.
+
+<Note>
+  Restoring a user does not necessarily restore all of their previous Team assignments. Be sure to add the user back to the appropriate Teams and review their Queue and Channel access.
+</Note>
+
+## Download Your User List
+
+Administrators can download the account's user list as a CSV from the **Users** section.
+
+You can also filter the user list to view:
+
+- Active users
+- Removed users
+- All users
+
+## Understanding User Access
+
+Several different settings determine what a user can see and do within Captivated.
+
+| Setting | What It Controls |
+| :-- | :-- |
+| **Account Role** | Determines whether the user is a Member, Manager, or Administrator and controls their overall account-level access. |
+| **Team Role** | Determines the user's permissions within a specific Team. |
+| **Queue Operator** | Determines whether the user monitors and takes new conversations from a Queue. |
+| **Channel Sharing** | Determines whether the user can send outbound messages from a specific Channel. |
+| **Queue Sharing** | Determines whether the user can transfer conversations into a specific Queue. |
+
+<Tip>
+  Adding a user to Captivated doesn't automatically give them access to every Team, Queue, or Channel. Review each user's access based on the responsibilities of their role.
+</Tip>
 
 ## Managing Users Video Walkthrough
 
 ![](https://play.vidyard.com/iv1cRdaKx7hnL6QCEjprDM.jpg)
 
-## Resend Invitation, Reset Password, Remove From Account, Delete User
+## Need Help?
 
-There are several actions available for an admin on the users page. These options are also available after selecting on a specific user. To do that hit on the name on of the user highlighted in blue. But first let's go through the definitions of each.
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-08-at-10.04.33%20AM.png)
-
-## Resend Invitation
-
-There are several actions available for an admin on the users page. First, let's look at 'resend invitation'. An email invitation is sent out immediately after adding a new user following the instructions above. **New users must create their password using this emailed invitation.** They cannot just head to app.captivated.works and enter their email address and hit forgot password as that will error out. In the event the user cannot find the emailed invitation, an admin can resend the invitation. Make sure the user looks for an email titled "XYZ Organization has invited you to join Captivated".
-
-## Reset Password
-
-Admins can send a user an emailed password reset. Users can also initiate their own by heading to the login page at app.captivated.works and selecting "forgot password".
-
-## Remove From Account
-
-This option will only show if you have multiple accounts under one organization. However, if you'd like to remove a user just from the particular account you are under but NOT the entire organization, you can do that here.
-
-## Delete User
-
-Use this option to delete a user from the organization. Deleted users will lose access to Captivated immediately but they can be later restored if needed. Scroll down below to learn how to restore a deleted user.
-
-Once you select this option, additional options will populate. Hover over the question mark icon for each to learn more about what they mean.
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2025-08-27-at-2.15.46%20PM.png)
-
-## Adding a User to Teams, Queues and Viewing Contact Card
-
-To manage a current User, click on their name in blue to open the record. Notice the 4 tabs at the top of the record.
-
-In the General tab, you'll see basic information, along with the same buttons that were on the previous screen: Resend Invitation, Reset Password, Remove User From Account and Delete User. The Edit button in the top right will allow you to make changes to the User's basic information (for example, email address, phone number, first/last name).
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-08-at-10.19.38%20AM.png)
-
-## Add User to a Team
-
-In the Teams tab, you'll see a list of any and all [teams](/administration/admin-teams) that this User has been assigned to, what their [role](/administration/admin-teams) is on each team, and the Actions list will allow you to Edit Membership or Remove from Team. Also in this screen, you have the ability to add the User to a new team by clicking the "+Add this user to another team" button.
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-08-at-10.23.54%20AM.png)
-
-## Add User as an Operator of the Queue
-
-The Queues tab is similar to the Team tab – it shows you each [Queue(s)](/administration/admin-queues) this user is an [operator](/administration/admin-queues) of. If the preview mode is enabled for the user, an operator can preview conversations in the queue prior to taking them or assigning them. The trash icon will remove the User from the queue. You can also add this user to another queue by using the green button.
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-08-at-10.28.55%20AM.png)
-
-## Contact Card
-
-In the Contact Card tab, you'll see the user's information. This information that is displayed when the user exchanges or shares their contact card via text. You have the ability to edit this user's contact card by clicking the Edit button in the top right corner. Make sure to save any changes you make at the bottom of the page.
-
-![](https://learn.captivated.works/wp-content/uploads/2022/08/Screen-Shot-2022-08-04-at-11.59.52-AM.png)
-
-## Download Users, View Removed Users
-
-From the users screen, you can also download your list of users to a CSV. To do that, just use the download button.
-
-Additionally, use the filters on the right to view only active users, only removed users or all.
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2024-05-08-at-10.49.06%20AM.png)
-
-## Restoring a Deleted User
-
-Restore a deleted user by clicking the "removed" filter. Then select "actions" > restore deleted user.
-
-Make sure to add them back to the proper teams after restoring them
-
-![](https://learn.captivated.works/wp-content/uploads/2020/05/Screenshot-2025-07-18-at-10.48.04%20AM.png)
+If you need assistance adding or managing users, contact **Captivated Support** using the **Support** option within Captivated or text **(317) 316-3600**.

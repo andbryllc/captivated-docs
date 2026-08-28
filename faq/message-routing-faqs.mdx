@@ -1,28 +1,90 @@
 ---
 title: "Where do my business texts route?"
-description: "How incoming and outgoing messages are routed in Captivated, including after a conversation is completed."
+description: "Learn where incoming messages go, who receives customer replies, and what happens when a conversation is completed."
 ---
 
-## When a contact initiates a conversation with my business, where does my message route?
+Where a customer's message goes in Captivated depends on **how the conversation started, who owns or is joined to the conversation, and your organization's Channel settings**.
 
-For most businesses, Captivated message routing works very much the same as a call center. A text comes in and designated personnel can handle the text or transfer it to another queue or person. Depending on your business' settings, one of three scenarios will occur:
+## When a Customer Starts a New Conversation
 
-1. The new message will route to the [queue](/administration/admin-queues), where designated queue operators can take the message and handle it themselves or transfer it to another queue or team member.
-2. The message will route to a team member's direct line if users have their own dedicated texting lines in Captivated.
-3. The message will route to a particular person whom the business has designated to receive all incoming messages.
+When a customer texts your business, the conversation follows the routing rules configured for that [Channel](/administration/admin-channels).
 
-## When I initiate a conversation in Captivated, where does the reply route?
+Depending on your organization's setup, the message may:
 
-When you start a new conversation in Captivated, you are the owner of the conversation and the reply will go directly back to you and anyone you've added to the conversation. The only exception to this might be if you "[complete](/features/conversations-transferring)" a conversation. See below for further explanation.
+1. **Route to a Queue** — The conversation waits in a [Queue](/administration/admin-queues) until a designated Queue Operator takes ownership. The Operator can then respond or transfer the conversation to another user or Queue.
+2. **Route to a User's dedicated line** — If a user has their own texting line, messages sent to that number can route directly to that user.
+3. **Route directly to a designated User** — A Channel can be configured so new incoming conversations are automatically routed to a specific person.
 
-## When I complete a conversation, where does the contact's next message route?
+<Tip>
+  **Think of Channel routing like a call center:** The number a customer contacts determines where the conversation goes first. From there, your team can take ownership or transfer the conversation as needed.
+</Tip>
 
-Depending on your business' settings when a conversation is completed (closed), the conversation will either route to the queue or back to anyone currently joined to the conversation. Typically, when closing out a conversation, all of the active members from the conversation will be removed and the message will route to the queue when the contact initiates a conversation with your business again. If you wish for that conversation to bypass the queue and route to you, you can re-join the conversation after completing it by hitting the take button. Being joined on a conversation ensures you receive notifications on all communication within a conversation.
+## When I Start a Conversation, Where Does the Customer's Reply Go?
 
-For users in Sales channels that wish to stay closely connected to their customers, Captivated can adjust a channel's settings allowing users to close and stay joined to their conversations by default. This is a great option when your contacts are more relationally based.
+When you start a new conversation in Captivated, you become the **owner** of that conversation.
 
-If you are still joined to a conversation after closing it out, indicated by your user photo remaining in color in the top right corner of a conversation, then the channel's default setting is to keep Captivated users joined after completing a conversation.
+When the customer replies, the response returns to that conversation and you—and other users joined to the conversation—can be notified of the activity.
 
-If you want to [leave a conversation](/features/conversations-transferring) after completing it, you can select the "leave" option in the top right corner of the conversation.
+The conversation continues this way until it is transferred, completed, or your participation in the conversation changes.
 
-Questions? You can chat with Captivated Support via the left-hand menu or text Captivated Support at 317.316.3600
+## What Happens When I Complete a Conversation?
+
+Completing a conversation indicates that the current interaction with the customer is finished.
+
+What happens when that customer texts your business again depends on the Channel's configuration.
+
+The conversation may:
+
+- Follow the Channel's routing rules again, such as returning to a Queue.
+- Return to users who remained joined to the conversation.
+
+For many organizations, users are automatically **unjoined** when a conversation is completed. If the customer reaches out again later, their message follows the Channel's normal routing rules.
+
+Other organizations may configure certain Channels so users **remain joined** after completing conversations.
+
+This can be useful for relationship-based workflows, such as Sales or Account Management, where the same employee should continue receiving activity from their customers.
+
+## Owner vs. Joined vs. Completed
+
+These terms are important when understanding conversation routing:
+
+| Term | What It Means |
+| :-- | :-- |
+| **Owner** | The user currently responsible for the conversation. |
+| **Joined** | A user participating in the conversation who can receive notifications about new activity. |
+| **Completed** | The current interaction has been marked finished. What happens when the customer messages again depends on the Channel's settings. |
+| **Unjoined** | The user is no longer participating in the conversation and will not receive notifications simply because they previously participated. |
+
+## Staying Joined After Completing a Conversation
+
+If your Channel is configured to unjoin users when conversations are completed, you can rejoin the conversation when appropriate.
+
+If your organization frequently needs users to maintain ongoing relationships with the same customers, your Administrator may also be able to configure the Channel to keep users joined after completion.
+
+> **Example:** A Sales Representative may want to remain joined to their customer conversations so future messages continue to involve that representative. A general Customer Service Channel may instead send future messages back to a shared Queue so the next available team member can respond.
+
+## How Do I Know If I'm Still Joined?
+
+You can view the participants on the conversation to determine whether you're currently joined.
+
+If you're no longer participating in a conversation but need to be, use the available **Join/Take** option to rejoin.
+
+To stop participating in a conversation, select **Leave**.
+
+Learn more about [joining, leaving, completing, and transferring conversations](/features/conversations-transferring).
+
+## Why Did a Message Go Somewhere Unexpected?
+
+If an incoming message didn't route where you expected, check:
+
+- Which Channel the customer contacted.
+- Where that Channel is configured to route.
+- Whether the conversation was already owned by a user.
+- Whether users remained joined after the conversation was previously completed.
+- Whether the Channel is configured to unjoin users when conversations are completed.
+
+Administrators can review Channel routing under **Administration \> Channels**.
+
+## Need Help?
+
+If you're unsure why a conversation routed to a particular User or Queue, contact **Captivated Support** using the in-app **Support** option. Our team can help review your routing configuration.

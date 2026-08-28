@@ -1,56 +1,149 @@
 ---
 title: "Why is my message failing?"
-description: "Common reasons a text message fails to deliver in Captivated, from carrier spam flags and links to landlines and prohibited content."
+description: "Learn why a text message may fail to deliver and how to identify the specific delivery error in Captivated."
 ---
 
-There are dozens of reasons that your message might show as failed. The easiest and fastest way to find the specific reason for the failure is to click on the drop down carrot to use our [failed message indicator](/features/sms-error-report) and it will show you the exact reason.
+There are several reasons a text message may fail to reach a customer. The fastest way to troubleshoot a failed message is to first check the **Failed Message Indicator** in Captivated.
 
-However, here are some common reasons.
+## Check the Failure Reason First
 
-### 1. Your message was flagged as SPAM by the carrier… it might contain trigger words
+When a message fails, select the **dropdown indicator** associated with the failed message to view additional information about the delivery error.
 
-This is *not* to say that your message actually was SPAM. However, something in your message, or the way it was sent, raised a flag at a carrier and it was marked as SPAM and blocked. While the carriers mostly align on their guidelines for sending and receiving text messages (SMS and MMS), each carrier has their own guidelines for what they consider SPAM. Knowing those guidelines ahead of time helps to avoid getting your message blocked as SPAM.
+The error details can help identify whether the issue is related to the recipient's number, carrier filtering, message content, or another delivery problem.
 
-Some carriers specifically look for [trigger words](https://www.practicalecommerce.com/spamfilter_phrases) and phrases such as "loan", "free", "click here", "offer", etc.
+For more information, see [SMS Error Reports](/features/sms-error-report).
 
-### 2. The message had a link in it
+<Tip>
+  Always check the error associated with the failed message before resending it. Repeatedly sending the same message may not resolve the issue and can sometimes make carrier filtering more likely.
+</Tip>
 
-Sending a link in your text messages can raise a red flag. While there are ways to do it (more on that below), trying to include a link can get your message blocked. If you need to include links, be sure to do it the right way. Public link shorteners such as **bit.ly or tiny.url** **will be blocked immediately**. If you need a link shortened and you do not have a dedicated domain, reach out to Captivated Support to help.
+## Common Reasons Messages Fail
 
-### 3. The volume of messages being sent (too many messages!)
+1. **The Recipient's Number Can't Receive SMS**
 
-There are guidelines around how many messages you can send depending on the number you're using. Phone numbers designated for P2P traffic (typically your local phone numbers) are generally only allowed to send 1 message per second (mps). There should also be a fairly even one-to-one balance of sending and receiving. Getting outside of these parameters by sending too many messages or having the messages be one-sided can result in your texts being blocked.
+Not every phone number can receive text messages.
 
-### 4. The message was sent to a number that couldn't receive it
+For example, a traditional landline generally cannot receive SMS. Some VoIP or other phone numbers may also have limitations.
 
-Landlines can't receive texts. It's true. Despite all our advances in technology, your home phone is still limited to sending and receiving voice calls. Sending a text to that number will result in it not being delivered. You can use our [number lookup functionality](/features/sms-verification) to confirm that you are indeed texting a number that can receive texts.
+Captivated provides an SMS verification indicator to help you understand whether a number is textable.
 
-Captivated's SMS verification badge will let you know whether a number can be texted. When viewing a contact's details (either using the "i" info icon in the top right-hand corner of a conversation, or viewing the contact from "Contacts"), you can hover over the colored badge next to the phone number, and it will give you more information on the number.
-
-**Green** = SMS Verified (textable and has been successfully communicated with in Captivated)
-
-**Blue** = Mobile Verified (textable, but you have not yet texted the client)
-
-**Yellow** = Non Mobile / VoIP line (usually not textable)
-
-**Red** = Confirmed Landline (not textable)
-
-**Gray** = Unknown
+| Indicator | What It Means |
+| --- | --- |
+| Green | SMS Verified — the number is textable and has successfully communicated through Captivated. |
+| Blue | Mobile Verified — the number is identified as textable, but you haven't successfully exchanged messages with it yet. |
+| Yellow | Non-Mobile or VoIP — texting capabilities may vary. |
+| Red | Confirmed Landline — the number is not textable. |
+| Gray | Unknown — texting capability has not been confirmed. |
 
 ![](https://learn.captivated.works/wp-content/uploads/2022/08/Screen-Shot-2022-08-04-at-12.35.19-PM.png)
 
-### 5. The carrier couldn't deliver the message/network problems
+You can review this information from the customer's contact details.
 
-Sometimes the carrier just can't get the message all the way there. There could be a problem with the network, congestion, or some other issue with the receiver (e.g. being in an area with limited or poor cell service) that just makes them unable to complete the delivery.
+2. **The Carrier Filtered the Message**
 
-### 6. The message contained a risky shortened URL
+Mobile carriers use filtering systems to protect their customers from unwanted, fraudulent, or abusive messaging.
 
-We mentioned including links as a way to get your message blocked above (it was #4 on our list). You can, however, include a link if you use a link shortener with a dedicated domain. But, you have to use the right kind. Using shorteners like **bit.ly or goo.gl** can get your message blocked as well as those shorteners are often associated with SPAM and illicit content.
+A legitimate business message can occasionally be filtered based on factors such as:
 
-### 7. The message contained prohibited content
+- Message content
+- Sending patterns or volume
+- URLs
+- Recipient engagement
+- Spam complaints
+- Opt-out activity
+- Sending reputation
+- Messaging registration or compliance
+- Repeated or highly similar messages
 
-Sending texts with prohibited content, such as adult content, references to drugs, gambling etc or anything referring to criminal activity, can get your messages blocked.
+Carrier filtering is dynamic, so there isn't a definitive list of words or phrases that will automatically cause a message to fail.
 
-### 8. The receiver has complained about this message type to the carrier
+<Tip>
+  Send relevant, expected messages to customers who have provided the appropriate consent, identify your business clearly, and avoid sending repetitive or unsolicited messages.
+</Tip>
 
-You might be following all the rules and somebody just complained about your message. Maybe they don't remember signing up to receive texts. Maybe they just decided they don't want them anymore but don't know how to opt out. Whatever the case may be, if the carriers receive complaints about your texts, they may stop delivering them.
+3. **The Message Contains a Risky URL**
+
+URLs can affect message deliverability, particularly when the destination or domain has a poor reputation.
+
+Avoid using public URL shorteners (bit.ly, tiny.url, goog.le) that obscure the final destination of the link.
+
+Whenever possible:
+
+- Use your business's own domain.
+- Use a branded or dedicated shortened domain.
+- Make sure the destination is legitimate and directly related to your message.
+- Avoid redirect chains or suspicious-looking URLs.
+
+If you need assistance with shortened links, contact Captivated Support.
+
+4. **Sending Patterns Triggered Carrier Filtering**
+
+Carriers evaluate more than the content of an individual message. They also look at messaging behavior.
+
+Delivery may be affected by patterns such as:
+
+- Sudden increases in messaging volume
+- Sending large quantities of identical messages
+- High rates of unanswered outbound messages
+- High opt-out or complaint rates
+- Messaging that differs significantly from the registered use case
+
+For messages being sent to a large audience, use Captivated's Announcements functionality and follow your organization's messaging and consent requirements rather than manually sending the same message repeatedly.
+
+5. **The Carrier or Recipient's Network Couldn't Complete Delivery**
+
+Sometimes a message fails for reasons outside of your control.
+
+For example:
+
+- The recipient's device may be unavailable.
+- The recipient may have poor or no cellular service.
+- The carrier may be experiencing a temporary network issue.
+- The recipient's account or messaging service may be temporarily unavailable.
+- There may be an issue between carrier networks.
+
+Depending on the failure reason, the customer may be able to receive messages again later.
+
+6. **The Message Contains Prohibited or Restricted Content**
+
+Certain categories of content are prohibited or restricted by mobile carriers and messaging providers.
+
+Examples can include content related to:
+
+- Illegal activity
+- Certain controlled substances
+- Gambling
+- Adult content
+- Fraudulent or deceptive offers
+- Other prohibited or restricted messaging categories
+
+Businesses are responsible for ensuring their messaging complies with applicable carrier requirements, laws, and Captivated's messaging policies.
+
+7. **The Recipient Has Opted Out or Complained**
+
+If a recipient has opted out of text messaging, you should not continue sending messages unless they appropriately opt back in.
+
+Carrier filtering can also be affected by recipients reporting messages as spam or unwanted.
+
+High complaint or opt-out rates can negatively affect your organization's messaging reputation and future deliverability.
+
+<Tip>
+  Only send messages customers expect to receive, honor opt-outs promptly, and make it clear who is messaging them.
+</Tip>
+
+## What Should I Do When a Message Fails?
+
+Start with the **Failed Message Indicator** rather than immediately resending the message.
+
+Depending on the error:
+
+1. Confirm that the customer's phone number is correct.
+2. Check the SMS verification status of the number.
+3. Review the message for unusual links or content.
+4. Confirm the customer is eligible and appropriately consented to receive the message.
+5. Avoid repeatedly sending the same failed message.
+6. Contact Captivated Support if the error isn't clear or failures continue.
+
+## Need Help?
+
+If you're unsure why a message failed, contact **Captivated Support** using the in-app **Support** option. Our team can help review the failure information and determine the appropriate next step.

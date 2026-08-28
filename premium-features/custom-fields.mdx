@@ -1,33 +1,111 @@
 ---
 title: "Custom Fields"
-description: "Use custom merge fields to communicate more specifically with your customers."
+description: "Personalize customer messages using additional information specific to your business, such as account balances, pet names, services, VIN numbers, and more."
 ---
 
-Utilize custom fields to communicate more specifically to your customers. Custom fields are available on Choice and above plans.
+## What Are Custom Fields?
 
-Examples of custom fields:
+**Custom Fields** allow you to store additional information about your contacts and automatically include that information in your messages.
 
-- past due balance amount
-- pet name
-- service provided
-- account number
-- birthday
+For example, you might create Custom Fields for:
+
+- Past-due balance
+- Pet name
+- Service provided
+- Account number
+- Birthday
 - VIN number
+- Appointment or service details
 
-To utilize custom fields, first reach out to Captivated Support and let them know what to title the custom fields. Our team will add the custom merge fields on the back end. Once that is done, we will provide you the merge field to add to your CSV file. The merge field will be within double curly brackets (`{{pet_name}}`, `{{vin_number}}`, etc.).
+### Example
 
-Then, create a CSV file to import into Captivated. The minimum amount of information needed would be first name, last name, mobile number, and custom field. To learn more on importing a CSV into Captivated, check out this [page](/features/importing-contacts).
+Instead of creating a separate message for every customer:
 
-Your custom field column will be the [merge field](/features/templates) you will use in your [templates](/features/templates).
+> Hi Sarah! Your current balance is \$125.00.
 
-![](https://learn.captivated.works/wp-content/uploads/2024/04/Screenshot-2024-04-26-at-9.31.19%20AM.png)
+You could create one Template:
 
-Once you have imported your CSV into Captivated, you can [create/modify your templates](/features/templates) to utilize these custom fields. First, navigate to the templates section in Captivated, hit "add", then click on "merge fields" in the top right and scroll to the bottom to locate the merge field you'd like to use in your template.
+> Hi \{\{first\_name\}\}! Your current balance is \{\{past\_due\_balance\}\}.
 
-![](https://learn.captivated.works/wp-content/uploads/2024/04/Screenshot-2024-04-26-at-9.57.01%20AM.png)
+When the message is sent, Captivated automatically replaces the Custom Fields with the information associated with each contact.
 
-Use the copy button to insert the merge field into your template.
+## Set Up Custom Fields
 
-![](https://learn.captivated.works/wp-content/uploads/2024/04/Screenshot-2024-04-26-at-10.00.48%20AM.png)
+Custom Fields are currently created with assistance from **Captivated Support**.
 
-Interested in implementing this feature? Reach out to Captivated Support using the headphone icon or text us at 317.316.3600.
+To get started:
+
+1. Contact Captivated Support and let us know which Custom Fields you'd like to create.
+2. Our team will create the fields for your account.
+3. We'll provide the corresponding **Merge Field** for each one.
+
+For example:
+
+| Custom Field | Merge Field |
+| :-- | :-- |
+| Pet Name | `{{pet_name}}` |
+| VIN Number | `{{vin_number}}` |
+| Past-Due Balance | `{{past_due_balance}}` |
+
+A **Merge Field** is simply a placeholder that tells Captivated which information to automatically insert into your message.
+
+## Add Custom Field Data to Your Contacts
+
+Once your Custom Fields have been created, you can add the corresponding information to your contacts through a [CSV import](/features/importing-contacts).
+
+Your CSV should include the contact information needed for the import along with a column for each Custom Field you'd like to populate.
+
+For example:
+
+| First Name | Last Name | Mobile Number | `{{pet_name}}` |
+| :-- | :-- | :-- | :-- |
+| Sarah | Smith | (555) 555-1234 | Charlie |
+| John | Jones | (555) 555-5678 | Max |
+
+Use the Merge Field provided by Captivated as the column heading for your Custom Field.
+
+For instructions on uploading your CSV, see [Importing Contacts](/features/importing-contacts).
+
+## Use Custom Fields in Templates
+
+Once your contact data has been imported, you can use Custom Fields in your Message Templates.
+
+1. Open [**Templates**](/features/templates).
+2. Create a new Template or edit an existing one.
+3. Select [**Merge Fields**](/features/templates).
+4. Locate the Custom Field you'd like to use.
+5. Copy and insert the Merge Field into your Template.
+6. Save your Template.
+
+When the Template is used, Captivated will automatically populate the Merge Field with the information stored for that contact.
+
+### Example
+
+Your Template:
+
+> Hi \{\{first\_name\}\}! Just a reminder that we'll be treating \{\{pet\_name\}\}'s yard tomorrow. Please keep pets indoors while your technician is completing the service.
+
+The customer receives:
+
+> Hi Sarah! Just a reminder that we'll be treating Charlie's yard tomorrow. Please keep pets indoors while your technician is completing the service.
+
+## Before Sending
+
+Always make sure your contact data is accurate before sending messages that contain Custom Fields.
+
+<Note>
+  If a contact doesn't have information stored for a Custom Field used in your Template, review how the message will appear before sending it. Missing or incorrect data can result in confusing messages for your customers.
+</Note>
+
+## Best Practices
+
+- Give Custom Fields simple, descriptive names.
+- Only create fields your team will actually use.
+- Keep your imported contact data accurate and up to date.
+- Test Templates containing Custom Fields before using them for a large Announcement.
+- Be especially careful with sensitive customer information. Only include information in a text message that is appropriate to send over SMS.
+- Review your CSV before importing to make sure Custom Field data is associated with the correct contacts.
+
+## Need a Custom Field?
+
+Contact **Captivated Support** using the **Support** option within Captivated or text **(317) 316-3600**. Let us know what information you'd like to personalize, and we'll help you get your Custom Fields set up.

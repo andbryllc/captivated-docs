@@ -1,64 +1,214 @@
 ---
 title: "The Dashboard"
-description: "Overview of the General, Conversation, Workflows, and Payments dashboards for managers and administrators in Captivated."
+description: "Captivated's dashboards give Managers and Administrators insight into messaging activity, conversation performance, workflows, payments, and more."
 ---
+
+Navigate to **Dashboards** in the left-hand menu to get started.
+
+Depending on the dashboard, you can filter results by **date range, account, and team**. Most reports can also be downloaded to CSV for additional reporting.
+
+## Understanding Messages, Segments and Conversations
+
+Before reviewing your dashboards, it's helpful to understand what Captivated is counting. Reports that appear similar may show different numbers because they're measuring different types of activity.
+
+| Term | What It Means |
+| :-- | :-- |
+| **Message** | One individual SMS or MMS sent or received. A long text is still one message. |
+| **Segment** | The SMS billing unit. A single long text can contain two or more segments. |
+| **Conversation (Thread)** | The ongoing conversation with a single contact. A thread can remain open across many messages. |
+| **Conversation Session** | A single open-to-completed session within a conversation thread. One thread can contain multiple sessions over time. |
+
+> **The key difference:** The **General Dashboard** primarily reports on messages and conversation threads, while the **Conversations Dashboard** reports on conversation sessions and transfers. Because they measure different activity, numbers between the two dashboards are not expected to match.
 
 ## General Dashboard
 
-If you are a manager or an administrator in Captivated, you can view a snapshot of your team's activity over a selected period of time, by account, and team by clicking "Dashboard" in the lefthand menu.
-
-Each report can be downloaded to CSV as well.
-
-Items you can view:
-
-- Messages and [segments](/getting-started/message-segments) (160 character in one text message) per channel indicated by both inbound and outbound
-- Outbound Messages
-- Currently Queued Conversations
-- Initiated Conversations
-- Open Conversations
-- Google Review Requests (If your team has this feature)
+The **General Dashboard** provides an overview of your organization's messaging activity and current conversation workload.
 
 ![](https://learn.captivated.works/wp-content/uploads/2018/10/general-1-.png)
 
-- Note: The Dashboard only shows activity that is taking place. If you are not seeing a team member in the dashboard, it means they haven't had any activity for the time period you have selected. You can adjust the time frame for the metrics mentioned above using the date range selection button in the top left corner of the page.
+### Messages per Channel
 
-![](https://learn.captivated.works/wp-content/uploads/2018/10/Screen-Shot-2021-05-20-at-10.30.21-AM.png)
+View messaging activity for each of your [Channels](/administration/admin-channels) during the selected date range.
 
-## Conversation Dashboard
+Use the dropdown to view:
 
-The Conversation Dashboard shows data regarding all conversations such as:
+- **Messages** – individual inbound and outbound texts
+- **Segments** – the SMS billing units associated with those messages
 
-- Conversations by Queue
-- Conversations Completed by User
-- Transfers by Queue
-- Transfers by User
+A single message may contain multiple segments depending on its length and content. Learn more about [Message Segments](/getting-started/message-segments).
 
-You can track data such as reply time and transfer time per user. Average time to take a conversation and average duration of the conversation.
+<Tip>
+  If you're reviewing SMS usage, be sure you're looking at **Segments**, not Messages.
+</Tip>
 
-![](https://learn.captivated.works/wp-content/uploads/2018/10/Screenshot-2023-10-06-at-12.46.17-PM.png)
+### Currently Queued Conversations
+
+View the number of conversations currently waiting in each [Queue](/administration/admin-queues) for an operator to take them.
+
+This is a **live snapshot of what's waiting right now**, so the selected date range does not apply.
+
+A higher number may indicate that conversations are waiting to be taken by your team.
+
+### Open Conversations
+
+View each User's currently open conversations.
+
+This report includes:
+
+- **Open** – conversations currently assigned to the User that haven't been completed
+- **Unanswered** – open conversations where the customer is waiting for a response
+
+This is also a **live snapshot**, so the date range does not apply.
+
+<Note>
+  An open conversation isn't necessarily unanswered. A User may have already replied but simply hasn't [completed the conversation](/features/conversations-transferring).
+</Note>
+
+### Outbound
+
+View the amount of outbound messaging sent by each User during the selected period.
+
+Use the dropdown to switch between:
+
+- **Messages**
+- **Segments**
+
+This report counts each outbound message sent. It does not count how many conversations the User started.
+
+### Initiated Conversations
+
+View the number of conversations each User initiated by sending the first message.
+
+For example, if a User sends five messages within the same conversation, those messages count individually under **Outbound**, but the conversation only counts once under **Initiated Conversations**.
+
+### Google Review Requests
+
+If your organization uses Captivated's Google Review feature, you can view review requests sent by each User and how many recipients opened the request.
+
+**Sent** shows review requests sent, while **Opened** indicates that the customer clicked the review link.
+
+<Note>
+  An opened request does not necessarily mean the customer submitted a review. Use the **Reviews Dashboard** to review completed ratings and additional review activity.
+</Note>
+
+## Conversations Dashboard
+
+The **Conversations Dashboard** focuses on how your team handles customer conversation **sessions**, including response times, completion activity, and transfers.
+
+<Note>
+  The Conversations Dashboard measures conversation **sessions**, not individual messages or ongoing conversation threads. Internal Team Chats are not included in these metrics.
+</Note>
+
+Conversations by Queue
+
+View conversation sessions based on the Queue where they began.
+
+This report includes:
+
+Metric	What It Means
+
+# Conversations	Sessions that began in the Queue during the selected date range
+
+Avg. Time to Take	Average amount of time before an operator took the conversation Avg. Response Time	Average amount of time before the first User response Avg. Duration	Average amount of time until the conversation session was completed
+
+This report should not be compared directly with Currently Queued Conversations on the General Dashboard. Currently Queued is a live count of conversations waiting right now, while Conversations by Queue reports session activity over a selected period.
+
+Conversations Completed by User
+
+View how many conversation sessions each User completed during the selected period.
+
+Completion credit goes to the User who completed the conversation, which may not necessarily be the User who sent the most messages or originally handled the conversation.
+
+Open conversations are not included in the completed count.
+
+### Transfers by User
+
+View conversation transfer activity by User, including:
+
+- Number of transfers received
+- Number replied to
+- Number transferred again
+- Number completed
+- Average reply time
+- Average transfer time
+- Average duration
+
+A single conversation session may be transferred more than once, so each transfer is counted as a separate transfer event.
+
+## Why Don't My Dashboard Numbers Match?
+
+Some Captivated reports may look similar but measure different activity.
+
+| If You're Comparing... | Here's the Difference |
+| :-- | :-- |
+| **Messages vs. Segments** | One message can contain multiple SMS segments. |
+| **Outbound vs. Initiated Conversations** | Outbound counts every message sent; Initiated counts conversations the User started. |
+| **Currently Queued vs. Conversations by Queue** | Currently Queued shows conversations waiting right now; Conversations by Queue reports sessions over a date range. |
+| **Open Conversations vs. Conversations by Queue** | Open Conversations shows currently open threads; Conversations by Queue reports sessions over a selected period. |
+| **User activity vs. Completed Conversations** | A User may send messages or handle a conversation without being the User who ultimately completes it. |
+| **Dashboard Messages vs. Billing** | Message activity and SMS segments are different measurements. Use the Segments view when reviewing SMS usage. |
+
+<Tip>
+  If you're not seeing a User or activity you expect, first check your **date range, Account, and Team filters**. Users without activity during the selected period may not appear in the applicable report.
+</Tip>
 
 ## Workflows Dashboard
 
-If you have access to workflows on your Captivated account, you can view your current Workflow States and as well as a historical summary of contacts who have entered a workflow under the "Workflows" tab of your Dashboard. If you have multiple workflows on your account, you can select which one you'd like to view using the dropdown above the "Current States" bar graph.
+If your organization uses [Workflows](/premium-features/automation-events-workflows), the **Workflows Dashboard** allows you to view where contacts currently are within your workflows as well as historical workflow activity.
+
+If you have multiple workflows, use the dropdown to select the workflow you'd like to review.
+
+### Current States
+
+**Current States** shows how many contacts are currently in each state of the selected workflow.
+
+This can help you identify where contacts are within your process and spot areas where contacts may be accumulating.
+
+Because Current States represents **what is happening right now**, it does not use a date range.
+
+Hover over a state to view the number of contacts currently in that state.
+
+### Summary
+
+The **Summary** shows how many contacts entered and exited the workflow during your selected date range.
+
+The chart also shows which workflow state contacts were in when they exited the workflow.
 
 ![](https://learn.captivated.works/wp-content/uploads/2022/08/Screen-Shot-2022-08-10-at-11.34.47-AM-1024x654.png)
 
-"Current States" shows how many contacts are currently in each state of your workflow, enabling you to see where people are in your pipeline and address any points of congestion that need attention within your business' processes. You can hover over a specific state with your mouse to view the actual number of contacts in that state. The "Current States" widget is represented in a bar graph without a date picker because it always shows what is currently happening.
-
-The "Summary" widget shows how many contacts have entered and exited the workflow within the given time you specify in the date picker. The pie chart shows a breakdown of the workflow state a contact was in when they exited a workflow. You can hover over a specific state of the pie chart with your mouse to view the actual number of contacts that were in that state when they exited the workflow.
-
 ## Payments Dashboard
 
-You can also view all of your payment requests and transactions via the "Payments" section in the lefthand menu. Like the general dashboard, you can view payments made between a specific range of dates and you can filter your payments by paid, unpaid, canceled and failed. You can also search for a payment by the reference number.
+If your organization uses Express Pay, the **Payments Dashboard** allows you to review payment requests and transactions.
 
-- To view the payment directly in the conversation, just click on the chat bubbles.
-- To send a refund, click on the three dots.
-- To download to CSV, hit the download button.
+Navigate to **Dashboards → Payments**.
+
+You can:
+
+- Select a date range
+- Filter payments by **Paid, Unpaid, Canceled, or Failed**
+- Search by payment reference number
+- Open the related Captivated conversation
+- Initiate a refund
+- Download payment information to CSV
 
 ![](https://learn.captivated.works/wp-content/uploads/2018/10/Screen-Shot-2021-05-20-at-10.47.19-AM.png)
 
-To view, filter and/or download your transactions by type, head to the Transactions Tab. Again, to view the payment directly in the conversation, just hit the blue chat bubbles next to the date and time.
+### Transactions
 
-If you don't see what you are looking for, hit the resync button to load all transactions.
+Select the **Transactions** tab to view, filter, and download transactions by type.
+
+Select the conversation icon next to a transaction to open the corresponding Captivated conversation.
+
+If a transaction you're looking for isn't displaying, select **Resync** to load the latest transaction information.
 
 ![](https://learn.captivated.works/wp-content/uploads/2018/10/Screen-Shot-2021-05-20-at-10.53.42-AM.png)
+
+## Dashboard Access
+
+Dashboards and the information available within them depend on your Captivated role, permissions, and enabled features.
+
+If you're unable to access a Dashboard or aren't seeing information you expect, contact your Captivated Administrator or Captivated Support.
+
+## Need Help?
+
+Questions about your Dashboard data? Chat with **Captivated Support** using the **Support** option in the left-hand menu or text **317.316.3600**.

@@ -38,7 +38,6 @@
           "getting-started/marketing",
           "getting-started/logging-in-to-captivated",
           "getting-started/downloading-the-mobile-app",
-          "getting-started/sms-encoding-and-special-characters",
           "getting-started/message-segments"
         ]
       },
@@ -56,15 +55,14 @@
               "features/mentions",
               "features/adding-an-internal-note",
               "features/templates",
-              "features/announcements",
-              "features/setting-your-signature"
+              "premium-features/announcements",
+              "getting-started/setting-your-signature"
             ]
           },
           {
             "group": "Conversations",
             "pages": [
               "features/conversations-transferring",
-              "features/closing-leaving-and-joining",
               "features/conversation-filtering-and-searching",
               "features/printing-a-conversation-transcript",
               "features/the-dashboard"
@@ -89,7 +87,7 @@
             "group": "Calling & Payments",
             "pages": [
               "features/outbound-calling",
-              "features/express-pay"
+              "premium-features/express-pay"
             ]
           },
           {
@@ -111,8 +109,8 @@
           "premium-features/requesting-a-location",
           "premium-features/requesting-a-form",
           "premium-features/custom-fields",
-          "premium-features/hubspot-plugin",
-          "premium-features/hubspot"
+          "integrations/hubspot-plugin",
+          "integrations/hubspot"
         ]
       },
       {
@@ -132,18 +130,17 @@
         "group": "Integrations & Guides",
         "pages": [
           "integrations/googlechromeextension",
-          "integrations/hubspot-integration",
-          "integrations/jotform-integration",
+          "premium-features/jotform-integration",
           "integrations/connecting-captivated-to-sa5",
           "integrations/exporting-customer-list-from-sa5",
           "integrations/send-adf-leads",
           "integrations/google-tag-manager",
-          "integrations/customize-website-widget",
-          "integrations/scheduling",
-          "integrations/virtual-door-knock",
-          "integrations/quick-user",
-          "integrations/contact-ownership",
-          "integrations/two-factor-authentication-2fa",
+          "features/customize-website-widget",
+          "premium-features/scheduling",
+          "premium-features/virtual-door-knock",
+          "features/quick-user",
+          "features/contact-ownership",
+          "getting-started/two-factor-authentication-2fa",
           "integrations/love-encore"
         ]
       },
@@ -161,9 +158,9 @@
           "faq/changing-a-contacts-phone-number",
           "faq/archiving",
           "faq/how-do-i-block-unwanted-messages-spam",
-          "faq/adding-a-profile-photo",
-          "faq/away-message",
-          "faq/notifications",
+          "getting-started/adding-a-profile-photo",
+          "getting-started/away-message",
+          "getting-started/notifications",
           "faq/resetting-your-password",
           "faq/where-can-i-see-my-account-usage",
           "faq/how-do-i-update-my-billing-information",

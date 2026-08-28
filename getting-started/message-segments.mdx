@@ -1,91 +1,133 @@
 ---
-title: "Message Segments"
-description: "Learn what SMS message segments are, how encoding affects them, and how to minimize costs."
+title: "Understanding Message Segments & Special Characters"
+description: "Learn how message length, emojis, and special characters affect your text messages, message segments, and messaging costs."
 ---
 
-## What Are Message Segments and Why Do They Matter?
+Text messaging may seem simple, but there are a few things happening behind the scenes that can affect how your messages are delivered and billed.
 
-If you're sending SMS announcements for your business, you've probably focused on writing short, punchy messages that drive action. But there's a technical detail under the hood that affects your **delivery costs, performance**, and even **message formatting**: **SMS message segmentation**.
+Understanding message segments and special characters will help you write more efficient text messages while keeping your messaging costs under control.
 
-In this article, we'll explain what SMS segments are, how they work, and what marketers need to know to avoid unnecessary costs while still creating compelling, on-brand messages.
+## What Is a Message Segment?
 
-## What Is an SMS Segment?
+A **message segment** is how mobile carriers measure the length of a text message.
 
-An **SMS segment** is the number of character "chunks" your message is broken into before it's sent over the mobile network. Mobile carriers have a limit on how much text can be included in a single SMS — if your message is too long, it's split into multiple segments automatically.
+Most standard text messages can contain up to **160 characters** before they're automatically split into additional segments.
 
-Each segment adds to your **billing count** and can affect **how the message appears to the recipient**.
+If your message exceeds the character limit, the carrier will divide it into multiple segments. Each segment is billed as an individual message.
 
-## Segment Length Depends on Encoding
+A longer message may count as two or three message segments instead of one.
 
-The two main SMS encoding types directly impact how many characters fit into a single segment:
+<Tip>
+  Use the [segment calculator](https://twiliodeved.github.io/message-segment-calculator/) to see how many characters your message will be. 
+</Tip>
 
-| Encoding Type       | Characters per 1 Segment | Characters per Segment (Multipart) |
-| ------------------- | ------------------------ | ---------------------------------- |
-| **GSM-7**           | 160 characters           | 153 characters                     |
-| **Unicode (UCS-2)** | 70 characters            | 67 characters                      |
+# Why Do Message Segments Matter?
 
-Learn more about [SMS encoding](/getting-started/sms-encoding-and-special-characters).
+Longer messages use more segments, which can:
 
-## How Multipart SMS Works
+- Increase messaging costs.
+- Create longer messages that are more difficult to read.
+- Occasionally cause messages to be split or delivered separately on some devices.
 
-When your message exceeds the segment limit (160 for GSM-7 or 70 for Unicode), it becomes a **multipart message**. That means:
+Whenever possible, keep messages short, clear, and conversational.
 
-- Your message is broken into chunks.
-- Each chunk is sent separately with headers that help phones reassemble them.
-- The character count per segment is slightly reduced to allow room for this header (153 or 67 characters per segment).
+# How Special Characters Affect Your Messages
 
-**Example**: A 325-character GSM-7 message = 3 segments (153 + 153 + 19)
+Not all characters are treated the same by mobile carriers.
 
-## Why Segments Matter to Your Business
+Using certain characters—such as emojis or special symbols—reduces the number of characters that fit into a single message segment.
 
-### 1. More Segments = More Cost
+These rules are not set by Captivated. SMS character limits are determined by industry-standard character encoding, primarily GSM-7 and Unicode/UCS-2. Captivated works within these standards and calculates message segments based on how carriers will encode and transmit your message.
 
-The sender is charged **per segment**, not per message. That means a message with 2–3 segments can **double or triple** your cost per send.
+Common examples include:
 
-### 2. Multipart Delivery Risks
+- E mojis: 😊 👍 ❤️ 🎉 ✅
+- Smart/curly quotation marks: “ ” ‘ 
+- Long dashes: — –
+- Ellipses: …
+- Bullets: •
+- Symbols: ™ © ® ✓ ★ → ←
+- Many accented characters: á í ó ú č š ž ł and others Non-English alphabets
+- Non-Latin characters and alphabets, including Chinese, Japanese, Korean, Arabic, Hebrew, Cyrillic, and others
+- Invisible Unicode spaces or formatting characters, which can sometimes be introduced when copying text from websites, Microsoft Word, Google Docs, or other applications
 
-Sometimes multipart messages may arrive:
+There's nothing wrong with using these characters—they simply use a different encoding standard, which means your message may be divided into additional segments sooner than expected.
 
-- Out of order
-- With slight delays
-- Missing formatting consistency
+## Example
 
-This can negatively impact urgent or time-sensitive campaigns.
+This message fits comfortably into a single message segment:
 
-### 3. User Experience
+> **Your lawn treatment is scheduled for tomorrow between 9:00 AM and 11:00 AM.**
 
-Long messages may get truncated or split awkwardly. Keeping messages within 1 segment improves clarity and engagement.
+Now imagine adding several emojis, special symbols, and additional text. While the message still looks similar to your customer, it may now be sent as multiple message segments.
 
-## Tips to Minimize SMS Segments
+<Note>
+  Not every special or accented character requires Unicode. Some characters—including é, è, ñ, ü, ä, ö, and several others—are supported by GSM-7. Characters such as \{ \} \[ \] \\ ^ ~ | € are also GSM-7 compatible but count as two character positions.
+</Note>
 
-- **Use character counters.** Utilize [online tools](https://twiliodeved.github.io/message-segment-calculator/) that will show you how many segments your message uses in real time.
-- **Avoid emojis unless they're essential.** Emojis switch your encoding to Unicode, shrinking your usable characters per segment.
-- **Don't copy and paste from Word or Google Docs.** These tools often use curly quotes and hidden special characters that force Unicode encoding.
-- **Use link shorteners.** Long URLs take up a lot of space — use branded or third-party shorteners (like Bit.ly or Rebrandly) to save room.
-- **A/B test shorter copy.** Sometimes, saying less increases conversion — and saves on segments.
+# Best Practices
 
-## Segment Counts and Cost Planning
+Here are a few simple ways to keep your messages efficient:
 
-Most marketing teams overlook segments when budgeting for SMS campaigns. Here's a quick cost scenario:
+- Keep messages short and easy to read.
+- Only use emojis when they add value to the conversation.
+- Avoid copying text directly from Microsoft Word or Google Docs, as these programs often insert smart quotes and other special characters.
+- Use shortened links instead of long URLs whenever possible.
+- Preview your message before sending large announcements or marketing campaigns.
+- Consider using an image when you need to share detailed instructions or promotional content instead of sending several long text messages.
 
-- Campaign A: 100,000 recipients, 1 segment each → 100,000 segments
-- Campaign B: 100,000 recipients, 3 segments each → 300,000 segments
+# Simple Example
 
-That's a **3x cost increase** for essentially the same message, just a little longer.
+1 Segment
 
-Understanding how segment math works gives you better control over campaign performance and spend.
+> Hi John! Your lawn treatment is scheduled for tomorrow between 9:00–11:00 AM. Reply STOP to opt out.
 
-## Summary: Smart SMS Campaigns Start With Segment Awareness
+2\+ Segments
 
-**Segments matter.** They affect how your message is sent, how much you pay, and how your users experience it.
+> Hi John! We wanted to remind you about your scheduled lawn treatment tomorrow between 9:00 and 11:00 AM. Please remember to move any lawn furniture, children's toys, pet bowls, garden hoses, or other obstacles before our technician arrives. If you have any questions, simply reply to this message.
 
-Before you hit send:
+The second message communicates more information, but it also uses multiple message segments.
 
-- Check your character and segment count.
-- Watch out for encoding changes from special characters.
-- Stay concise and clear for better deliverability and ROI.
+# Tips for Keeping Messages Short
 
-By designing campaigns with SMS segmentation in mind, you'll create messages that are not only **cost-effective** but also **more impactful**.
+Here are a few easy ways to reduce message segments:
 
-**Need help optimizing your next SMS campaign?**  
-Get in touch — our team can help you craft messages that perform better, cost less, and reach more people.
+- Keep messages clear and concise.
+- Avoid unnecessary words.
+- Use images instead of long written instructions when appropriate.
+- Be mindful when using emojis or special characters.
+- Use shortened links instead of long URLs. 
+
+<Warning>
+  Do not common link shorteners like bit.ly, goog.le, tiny.url instead use a proprietary shortener with your business name.
+</Warning>
+
+<Warning>
+  Images must be under 1mb in size for successful deliverability
+</Warning>
+
+# Frequently Asked Questions
+
+<Accordion title="Why did my message count as multiple text messages?">
+  Your message either exceeded the character limit or included special characters that reduced the number of characters allowed in a single message segment.
+</Accordion>
+
+<Accordion title="Do emojis cost more?">
+  Not directly. However, emojis reduce the number of characters that fit into each message segment, which may cause your message to use additional segments.
+</Accordion>
+
+<Accordion title="Should I always stay under 160 characters?">
+  Not necessarily.
+
+  Your priority should always be sending a clear, helpful message. While shorter messages often reduce costs and improve readability, it's perfectly acceptable to use multiple message segments when additional information provides value to your customer.
+</Accordion>
+
+# The Bottom Line
+
+Message segments and special characters are simply part of how text messaging works.
+
+By keeping your messages concise and understanding how special characters affect message length, you can better manage messaging costs while creating a great experience for your customers.
+
+<Tip>
+  Focus on writing messages that are clear, helpful, and easy to read. If an emoji or additional information improves the customer experience, don't be afraid to use it—just be aware that it may increase the number of message segments used.
+</Tip>

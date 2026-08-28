@@ -1,0 +1,118 @@
+---
+title: "HubSpot Integration"
+description: "Sync HubSpot contacts and properties with Captivated to keep customer information up to date and personalize your messages."
+---
+
+The HubSpot integration allows you to bring contact information from HubSpot into Captivated and keep the two systems connected.
+
+With HubSpot Contact Sync, you can:
+
+- Sync HubSpot contacts with Captivated.
+- Display selected HubSpot Properties within Captivated.
+- View HubSpot Contact Owners.
+- Update contact information from Captivated.
+- Open a contact's HubSpot record directly from Captivated.
+- Add Captivated contacts to HubSpot.
+- Use HubSpot Properties as Merge Fields in Captivated Templates.
+
+## Choose Which HubSpot Properties to Display
+
+Administrators can select which **HubSpot Properties** should be available within Captivated.
+
+Once configured, the selected properties will appear with your HubSpot contacts and can be used to provide your team with additional customer information.
+
+Administrators can update the selected properties as needed.
+
+![](https://learn.captivated.works/wp-content/uploads/2024/03/HubSpot-field-properties-to-display-768x514.png)
+
+## Sync Your HubSpot Contacts
+
+Once you've selected the properties you'd like to display, select **Sync All** to complete the initial sync of your HubSpot contacts with Captivated.
+
+After the initial sync, Captivated automatically syncs your HubSpot contacts **each night** so changes made in HubSpot are reflected in Captivated.
+
+You can also manually sync contacts when needed:
+
+| Sync Option | What It Does |
+| :-- | :-- |
+| **Sync All** | Syncs all applicable HubSpot contacts with Captivated. |
+| **Sync Recent** | Syncs contact changes made since the previous sync. |
+| **Automatic Sync** | Runs nightly to keep HubSpot contact information updated in Captivated. |
+
+<Tip>
+  Use **Sync Recent** when you need recent HubSpot changes reflected in Captivated before the next automatic nightly sync.
+</Tip>
+
+![](https://learn.captivated.works/wp-content/uploads/2024/03/Properties-selected-768x429.png)
+
+## View HubSpot Contact Owners
+
+Captivated displays the **HubSpot Contact Owner** associated with synced contacts.
+
+If the Contact Owner is also a Captivated user and their **email addresses match**, Captivated can associate the HubSpot user with their Captivated user profile.
+
+If the HubSpot Contact Owner isn't a Captivated user, their HubSpot email address will display instead.
+
+<Note>
+  Make sure users have the same work email address in both HubSpot and Captivated when you want their user records to match.
+</Note>
+
+## View HubSpot Information in Captivated
+
+When viewing a synced contact in Captivated, their selected HubSpot Properties appear under **About This Contact**.
+
+From the contact record, you can also select the **launch icon** to open the corresponding contact record directly in HubSpot.
+
+You'll need the appropriate permissions in HubSpot to view the record.
+
+## Update Contact Information
+
+Contact information can also be updated from Captivated.
+
+1. Open the contact.
+2. Select **Edit**.
+3. Update the applicable contact information.
+4. Save your changes.
+
+Applicable changes will be sent to HubSpot.
+
+Use the **Refresh** option if you need to immediately display the updated information in Captivated.
+
+## Add a Captivated Contact to HubSpot
+
+If a contact exists in Captivated but hasn't yet been added to HubSpot, you can send the contact to your CRM.
+
+1. Open the contact in Captivated.
+2. Select **Edit**.
+3. Select **Send to CRM**.
+
+Captivated will create the contact in HubSpot using the available contact information.
+
+## Use HubSpot Properties in Templates
+
+Selected HubSpot Properties can also be used as **Merge Fields** within Captivated Message Templates.
+
+This allows you to personalize messages using information already stored in HubSpot.
+
+For example, if you sync a property for a customer's vehicle model, your Template might look like:
+
+> Hi \{\{first\_name\}\}, just checking in about your \{\{vehicle\_model\}\}. Let me know if there's anything I can help with!
+
+When the Template is used, Captivated automatically inserts the information associated with that contact.
+
+<Warning>
+  Always review your contact data and Template before sending. If a contact doesn't have a value for a HubSpot Property you're using, make sure you know how the message will appear before sending it.
+</Warning>
+
+## Best Practices
+
+- Decide which HubSpot Properties are actually useful to your Captivated users rather than syncing unnecessary information.
+- Keep user email addresses consistent between HubSpot and Captivated so Contact Owners can be properly matched.
+- Use **Sync Recent** when you need recent changes before the nightly automatic sync.
+- Review synced data before using HubSpot Properties in large Announcements.
+- Only sync and use customer information that's appropriate for your team's messaging workflows.
+- Avoid including sensitive customer information in standard SMS messages.
+
+## Get Started with HubSpot
+
+If you'd like to enable or configure the HubSpot integration, contact **Captivated Support** using the in-app **Support** option or text **(317) 316-3600**.
