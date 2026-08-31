@@ -32,12 +32,12 @@
         "group": "Getting Started",
         "pages": [
           "getting-started/success-pt1",
+          "getting-started/logging-in-to-captivated",
           "getting-started/setting-up-my-profile",
+          "getting-started/downloading-the-mobile-app",
           "getting-started/best-texting-practices-for-your-business",
           "getting-started/best-texting-practices-for-your-dealership",
           "getting-started/marketing",
-          "getting-started/logging-in-to-captivated",
-          "getting-started/downloading-the-mobile-app",
           "getting-started/message-segments"
         ]
       },
