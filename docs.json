@@ -31,10 +31,12 @@
       {
         "group": "Getting Started",
         "pages": [
-          "getting-started/success-pt1",
           "getting-started/logging-in-to-captivated",
           "getting-started/setting-up-my-profile",
+          "getting-started/setting-your-signature",
+          "getting-started/two-factor-authentication-2fa",
           "getting-started/downloading-the-mobile-app",
+          "getting-started/success-pt1",
           "getting-started/best-texting-practices-for-your-business",
           "getting-started/best-texting-practices-for-your-dealership",
           "getting-started/marketing",
@@ -54,9 +56,7 @@
               "features/voice-memos-files",
               "features/mentions",
               "features/adding-an-internal-note",
-              "features/templates",
-              "premium-features/announcements",
-              "getting-started/setting-your-signature"
+              "features/templates"
             ]
           },
           {
@@ -80,13 +80,15 @@
               "features/sending-your-contact-card",
               "features/sms-verification",
               "features/blocking-a-contact",
-              "features/opting-out"
+              "features/opting-out",
+              "features/contact-ownership"
             ]
           },
           {
             "group": "Calling & Payments",
             "pages": [
               "features/outbound-calling",
+              "premium-features/secure-video-chat",
               "premium-features/express-pay"
             ]
           },
@@ -101,16 +103,16 @@
       {
         "group": "Premium Features",
         "pages": [
-          "premium-features/automation-events-workflows",
+          "premium-features/announcements",
           "premium-features/google-review-requests",
-          "premium-features/team-chat",
-          "premium-features/secure-chat",
-          "premium-features/secure-video-chat",
-          "premium-features/requesting-a-location",
-          "premium-features/requesting-a-form",
           "premium-features/custom-fields",
-          "integrations/hubspot-plugin",
-          "integrations/hubspot"
+          "premium-features/automation-events-workflows",
+          "premium-features/team-chat",
+          "premium-features/scheduling",
+          "premium-features/requesting-a-location",
+          "premium-features/virtual-door-knock",
+          "premium-features/requesting-a-form",
+          "premium-features/secure-chat"
         ]
       },
       {
@@ -118,29 +120,27 @@
         "pages": [
           "administration/administration",
           "administration/admin-users",
-          "administration/admin-teams",
           "administration/admin-queues",
           "administration/admin-channels",
-          "administration/keyword-actions",
+          "administration/admin-teams",
           "administration/admin-account-usage",
-          "administration/admin-account-contact-card"
+          "administration/keyword-actions",
+          "administration/admin-account-contact-card",
+          "features/quick-user"
         ]
       },
       {
         "group": "Integrations & Guides",
         "pages": [
           "integrations/googlechromeextension",
-          "premium-features/jotform-integration",
           "integrations/connecting-captivated-to-sa5",
+          "integrations/hubspot-plugin",
+          "integrations/hubspot",
+          "premium-features/jotform-integration",
           "integrations/exporting-customer-list-from-sa5",
           "integrations/send-adf-leads",
           "integrations/google-tag-manager",
           "features/customize-website-widget",
-          "premium-features/scheduling",
-          "premium-features/virtual-door-knock",
-          "features/quick-user",
-          "features/contact-ownership",
-          "getting-started/two-factor-authentication-2fa",
           "integrations/love-encore"
         ]
       },
