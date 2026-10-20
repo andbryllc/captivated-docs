@@ -41,7 +41,8 @@
           "getting-started/best-texting-practices-for-your-dealership",
           "getting-started/marketing",
           "getting-started/message-segments"
-        ]
+        ],
+        "root": "getting-started/index"
       },
       {
         "group": "Features",
