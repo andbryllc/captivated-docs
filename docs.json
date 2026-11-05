@@ -86,11 +86,10 @@
             ]
           },
           {
-            "group": "Calling & Payments",
+            "group": "Calling & Video",
             "pages": [
               "features/outbound-calling",
-              "premium-features/secure-video-chat",
-              "premium-features/express-pay"
+              "premium-features/secure-video-chat"
             ]
           },
           {
@@ -99,7 +98,8 @@
               "features/sms-error-report"
             ]
           }
-        ]
+        ],
+        "root": "features/index"
       },
       {
         "group": "Premium Features",
@@ -113,60 +113,132 @@
           "premium-features/requesting-a-location",
           "premium-features/virtual-door-knock",
           "premium-features/requesting-a-form",
-          "premium-features/secure-chat"
-        ]
+          "premium-features/secure-chat",
+          "premium-features/express-pay"
+        ],
+        "root": "premium-features/index"
       },
       {
         "group": "Administration",
         "pages": [
-          "administration/administration",
-          "administration/admin-users",
-          "administration/admin-queues",
-          "administration/admin-channels",
-          "administration/admin-teams",
-          "administration/admin-account-usage",
-          "administration/keyword-actions",
-          "administration/admin-account-contact-card",
-          "features/quick-user"
-        ]
+          {
+            "group": "Users & Teams",
+            "pages": [
+              "administration/admin-users",
+              "administration/admin-teams",
+              "features/quick-user"
+            ]
+          },
+          {
+            "group": "Channels & Queues",
+            "pages": [
+              "administration/admin-channels",
+              "administration/admin-queues",
+              "administration/keyword-actions"
+            ]
+          },
+          {
+            "group": "Account Settings & Billing",
+            "pages": [
+              "administration/administration",
+              "administration/admin-account-usage",
+              "administration/admin-account-contact-card"
+            ]
+          },
+          {
+            "group": "Security & Access",
+            "pages": [
+              "authentication-policy"
+            ]
+          }
+        ],
+        "root": "administration/index"
       },
       {
         "group": "Integrations & Guides",
         "pages": [
-          "integrations/googlechromeextension",
-          "integrations/connecting-captivated-to-sa5",
-          "integrations/hubspot-plugin",
-          "integrations/hubspot",
-          "premium-features/jotform-integration",
-          "integrations/exporting-customer-list-from-sa5",
-          "integrations/send-adf-leads",
-          "integrations/google-tag-manager",
-          "features/customize-website-widget",
-          "integrations/love-encore"
-        ]
+          {
+            "group": "CRM & Business Software Integrations",
+            "pages": [
+              "integrations/connecting-captivated-to-sa5",
+              "spraye-integration",
+              "integrations/hubspot",
+              "integrations/hubspot-plugin",
+              "integrations/love-encore"
+            ]
+          },
+          {
+            "group": "Browser & Website Integrations",
+            "pages": [
+              "integrations/googlechromeextension",
+              "features/customize-website-widget",
+              "integrations/google-tag-manager"
+            ]
+          },
+          {
+            "group": "Forms & Lead Management",
+            "pages": [
+              "premium-features/jotform-integration",
+              "integrations/send-adf-leads"
+            ]
+          },
+          {
+            "group": "Data Export & Migration",
+            "pages": [
+              "integrations/exporting-customer-list-from-sa5"
+            ]
+          }
+        ],
+        "root": "integrations/index"
       },
       {
         "group": "FAQ",
         "pages": [
-          "faq/message-routing-faqs",
-          "faq/why-cant-i-see-new-incoming-messages",
-          "faq/why-cant-i-complete-a-conversation",
-          "faq/why-cant-i-see-my-entire-teams-conversations",
-          "faq/unreplied",
-          "faq/failed-messages",
-          "faq/announcements-2",
-          "faq/how-do-i-import-contacts",
-          "faq/changing-a-contacts-phone-number",
-          "faq/archiving",
-          "faq/how-do-i-block-unwanted-messages-spam",
-          "getting-started/adding-a-profile-photo",
-          "getting-started/away-message",
-          "getting-started/notifications",
-          "faq/resetting-your-password",
-          "faq/where-can-i-see-my-account-usage",
-          "faq/how-do-i-update-my-billing-information",
-          "faq/what-do-i-do-if-i-am-changing-my-phone-carrier"
-        ]
+          {
+            "group": "Conversations & Messaging",
+            "pages": [
+              "faq/message-routing-faqs",
+              "faq/why-cant-i-see-new-incoming-messages",
+              "faq/why-cant-i-complete-a-conversation",
+              "faq/why-cant-i-see-my-entire-teams-conversations",
+              "faq/unreplied",
+              "faq/failed-messages",
+              "faq/announcements-2"
+            ]
+          },
+          {
+            "group": "Contacts & Contact Management",
+            "pages": [
+              "faq/how-do-i-import-contacts",
+              "faq/changing-a-contacts-phone-number",
+              "faq/archiving",
+              "faq/how-do-i-block-unwanted-messages-spam"
+            ]
+          },
+          {
+            "group": "Profile & Notifications",
+            "pages": [
+              "getting-started/adding-a-profile-photo",
+              "getting-started/away-message",
+              "getting-started/notifications",
+              "faq/resetting-your-password"
+            ]
+          },
+          {
+            "group": "Billing & Account Usage",
+            "pages": [
+              "faq/where-can-i-see-my-account-usage",
+              "faq/how-do-i-update-my-billing-information"
+            ]
+          },
+          {
+            "group": "Phone & Carrier Questions",
+            "pages": [
+              "faq/what-do-i-do-if-i-am-changing-my-phone-carrier"
+            ]
+          }
+        ],
+        "root": "faq/index"
       },
       {
         "group": "What's New",

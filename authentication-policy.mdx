@@ -1,0 +1,136 @@
+---
+title: "Authentication Policy"
+---
+
+Authentication Policy allows Administrators to control how Users within their organization sign in to Captivated.
+
+You can allow your team to sign in using a **Captivated password, Google account, Microsoft/Outlook account, or a combination of these methods**.
+
+For organizations using Google Workspace or Microsoft 365, this provides a convenient way for employees to access Captivated using their existing accounts.
+
+<Note>
+  Authentication Policy settings are available to organization Administrators when this feature is enabled for their account. If you don't see these settings, contact Captivated Support.
+</Note>
+
+## Access Your Authentication Policy
+
+To view or update your organization's sign-in settings:
+
+1. Sign in to Captivated as an Administrator.
+2. Navigate to **Administration → Organization Settings**.
+3. Locate **Authentication Policy**.
+
+These settings apply to all Users within your organization.
+
+## Choose Your Sign-In Methods
+
+Authentication Policy provides two configuration options.
+
+### Automatic
+
+When **Automatic** is enabled, Users can choose from all available sign-in methods:
+
+- Google
+- Password
+- Microsoft/Outlook
+
+After entering their email address, Users can select their preferred sign-in method.
+
+### Select Identity Providers
+
+To restrict which sign-in methods your organization allows:
+
+1. Turn **Automatic** off.
+2. Enable the Identity Providers you want to allow:
+   - **Google**
+   - **Password**
+   - **Microsoft/Outlook**
+3. Save your changes.
+
+Your team will only be offered the sign-in methods you've enabled.
+
+For example:
+
+- **Google + Password:** Users can choose between Google and their Captivated password.
+- **Microsoft/Outlook only:** Users are directed to Microsoft sign-in after entering their email.
+- **Google only:** Users are directed to Google sign-in without an additional selection screen.
+
+<Check>
+  Important: At least one Identity Provider must remain enabled when Automatic is turned off. Captivated will not allow you to save a configuration that disables every sign-in method.
+</Check>
+
+## What Your Team Sees When Signing In
+
+All Users begin by entering their email address on the Captivated login screen.
+
+What happens next depends on your organization's Authentication Policy.
+
+| Authentication Policy | Sign-In Experience |
+| :-- | :-- |
+| Automatic enabled | All available sign-in options are displayed. |
+| Multiple Identity Providers enabled | Users choose from the enabled methods. |
+| One Identity Provider enabled | Users are directed straight to that sign-in method. |
+
+The same Authentication Policy applies when signing in through Captivated on desktop or mobile.
+
+## Disabling Password Sign-In
+
+Organizations that prefer employees to use Google or Microsoft can disable traditional Captivated password sign-in.
+
+When **Password** is disabled, password-related options are automatically removed because they are no longer applicable.
+
+Administrators will no longer see these User management actions:
+
+- Resend Invitation
+- Send Password Reset
+- Force Password Reset
+
+Individual Users will no longer see **Change Your Password** under their Credentials settings or the password option in their mobile profile.
+
+<Check>
+  Important: Before disabling Password, confirm that your employees can successfully access the Google or Microsoft accounts associated with their Captivated email addresses.
+</Check>
+
+> **Important:** Before disabling Password, confirm that your employees can successfully access the Google or Microsoft accounts associated with their Captivated email addresses.
+
+If Password is enabled again, the applicable password-management options become available.
+
+## Terminal Users and Shared Workstations
+
+Terminal Users are not affected by Authentication Policy settings.
+
+Employees using a shared Terminal User account will continue accessing Captivated through their assigned PINs, regardless of which Identity Providers your organization allows.
+
+## View Authentication Policy Changes
+
+Administrators can see when the organization's Authentication Policy was last updated and who made the change.
+
+This information appears under **Administration → Organization Settings**.
+
+If Captivated makes an update on your organization's behalf, the change will be attributed to **Captivated Support**.
+
+## Frequently Asked Questions
+
+<Accordion title="Can different Users have different sign-in requirements?">
+  No. Authentication Policy applies to the entire organization, rather than individual Users.
+</Accordion>
+
+<Accordion title="Can we allow both Google and Microsoft sign-in?">
+  Yes. Turn off Automatic and enable both Google and Microsoft/Outlook under Identity Providers.
+</Accordion>
+
+<Accordion title="Why don't I see the password reset option?">
+  Your organization may have disabled Password as an approved sign-in method. Contact your Administrator to confirm your organization's Authentication Policy.
+</Accordion>
+
+<Accordion title="What happens if we enable only one sign-in method?">
+  After entering their email address, Users are directed to the single enabled Identity Provider without having to select from multiple options.
+</Accordion>
+
+<Accordion title="Will this affect our Terminal Users?">
+  No. Terminal Users continue using their existing PIN-based access.
+</Accordion>
+
+## Need Help?
+
+If you have questions about Authentication Policy, need help configuring your organization's sign-in methods, or don't see the setting available, contact **Captivated Support** using the **Support** option in the left-hand menu.
