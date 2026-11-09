@@ -68,7 +68,7 @@
               "features/printing-a-conversation-transcript",
               "features/the-dashboard",
               "ai-conversation-summaries-and-bubble-based-scrolling",
-              "pinning-conversations"
+              "features/pinning-conversations"
             ]
           },
           {
