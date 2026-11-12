@@ -23,28 +23,29 @@ You'll need the **API key** provided in your Launch Plan.
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-2.58.31-PM.png)
 
-Expand **Texting Provider**.
+4. Expand **Texting Provider**.
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-2.59.53-PM.png)
 
 <Note>
-  Access to Integrations must be enabled within **Employee Security** to make changes. Settings can be configured for an individual branch or copied to other branches the User has access to using **Copy to All Branches**
+  Access to Integrations must be enabled within **Employee Security** to make changes. Settings can be configured for an individual branch or copied to other branches the user has access to using **Copy to All Branches**.
 </Note>
 
 5. Paste your Captivated API key into the **API Key** field.
 6. Enter the Captivated number customers should receive messages from in the **SMS Number** field.
 
-> **Important:** Enter the 10-digit SMS number using **numbers only**. Do not include spaces, periods, dashes, or parentheses.
->
-> Example: `1112223333`
+<Warning>
+  Enter the 10-digit SMS number using **numbers only**. Do not include spaces, periods, dashes, or parentheses.
+
+  Example: `1112223333`
+</Warning>
 
 ### Configure Call Logs for Unsuccessful Messages
 
 You'll also configure how SA5 handles messages that are unsuccessful.
 
-**Opt-Out Call Status:**<br />Choose the Call Log status that should be used when a message is unsuccessful.
-
-**Call Log Assigned Employee:**<br />Choose the employee who should receive Call Log entries for unsuccessful messages.
+- **Opt-Out Call Status:** Choose the Call Log status that should be used when a message is unsuccessful.
+- **Call Log Assigned Employee:** Choose the employee who should receive Call Log entries for unsuccessful messages.
 
 Common reasons a message may be unsuccessful include:
 
@@ -68,8 +69,6 @@ Before using **Send to Texting** from an SA5 report, you'll need to create your 
 1. Select the **gear icon**.
 2. Select **Document Template Setup**.
 
-2A: Click on the gear icon and then Document Template Setup.
-
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-3.04.46-PM.png)
 
 <Note>
@@ -78,10 +77,10 @@ Before using **Send to Texting** from an SA5 report, you'll need to create your 
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-3.05.17-PM.png)
 
-- Select the **\+** icon to create a new template.
-- Enter a name for your template.
-- Under **Template Type**, select **Texting**.
-- Compose your message.
+3. Select the **\+** icon to create a new template.
+4. Enter a name for your template.
+5. Under **Template Type**, select **Texting**.
+6. Compose your message.
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-3.08.03-PM.png)
 
@@ -99,7 +98,7 @@ SA5 data fields allow you to personalize the message using information from the 
   **Keep message length in mind:** Longer SMS messages may be divided into multiple segments. Data fields can also cause the final character count to vary from customer to customer.
 </Warning>
 
-#### Step 3: Send Bulk Messages From SA5
+## Step 3: Send Bulk Messages From SA5
 
 The **Send to Texting** option allows you to send messages from supported SA5 reports through Captivated.
 
@@ -132,8 +131,8 @@ If the customer has both, only one message is sent, with the **text number takin
 
 ![](https://learn.captivated.works/wp-content/uploads/2020/04/Screen-Shot-2022-03-17-at-10.21.31-AM-1024x494.png)
 
-- Select the **Actions** button.
-- Under **Targets**, select **Send to Texting**.
+4. Select the **Actions** button.
+5. Under **Targets**, select **Send to Texting**.
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-3.22.38-PM.png)
 
@@ -143,12 +142,12 @@ If the customer has both, only one message is sent, with the **text number takin
 9. Send your messages.
 
 <Warning>
-  **Recommended:** Leave both **Captivated Conversation Options unchecked** for the best experience. If these options are selected, messages may appear in Captivated as new queued conversations
+  **Recommended:** Leave both **Captivated Conversation Options** unchecked for the best experience. If these options are selected, messages may appear in Captivated as new queued conversations.
 </Warning>
 
 ![](https://learn.captivated.works/wp-content/uploads/2020/04/Screen-Shot-2021-08-23-at-3.57.01-PM-565x1024.png)
 
-**Be Careful With the Send to Texting Shortcut**
+### Be Careful With the Send to Texting Shortcut
 
 <Danger>
   Selecting **Send to Texting** next to the **Preview** button at the bottom of the report automatically sends the most recently used template.
@@ -179,7 +178,9 @@ After sending, SA5 displays a pop-up showing the number of:
 - **Successful sends**
 - **Unsuccessful sends**
 
-If any messages were unsuccessful, check the **Call Log** to see which customers didn't receive the message and why.
+<Note>
+  An unsuccessful send reported by SA5 indicates that SA5 could not successfully submit the message through the integration. This is different from a message that reaches Captivated but later fails delivery through the carrier.
+</Note>
 
 Common reasons include:
 
@@ -194,19 +195,18 @@ Common reasons include:
 
 ### Review Sent Messages in Captivated
 
-To find and review these conversations in Captivated, change your conversation filters from:
+To find and review messages sent from SA5, adjust your Captivated conversation filters:
 
-**Mine → Everyone**
+- **Conversation ownership:** Change **Mine** to **Everyone**.
+- **Conversation status:** Change **Active** to **All**.
 
-and
+This allows you to find conversations that aren't currently assigned to you or are no longer active.
 
-**Active → All**
-
-# Managing Customer Opt-Outs
+## Managing Customer Opt-Outs
 
 It's important to account for customers who should not receive text messages when building your SA5 reports.
 
-## Exclude Customers Who Have Opted Out
+### Exclude Customers Who Have Opted Out
 
 When configuring your report:
 
@@ -216,19 +216,19 @@ When configuring your report:
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-3.19.01-PM.png)
 
-- If a customer replies **STOP**, the **Don't Text** checkbox is automatically selected on their SA5 customer record under:
-  **Contact → Preferences**
-  This prevents messages from being sent to that customer through an SA5 report.
+If a customer replies **STOP**, the **Don't Text** checkbox is automatically selected on their SA5 customer record under **Contact → Preferences**.
+
+This prevents messages from being sent to that customer through an SA5 report.
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-04-29-at-3.21.22-PM.png)
 
-**SA5 Don't Text vs. Captivated Opt-Outs**
+### SA5 Don't Text vs. Captivated Opt-Outs
 
 <Note>
-  The **Don't Text** preference within SA5 and an opt-out within Captivated do not work exactly the same way
+  The **Don't Text** preference within SA5 and an opt-out within Captivated do not work exactly the same way.
 </Note>
 
-If an SA5 User manually selects **Don't Text** from the Customer Details page, that preference is **not honored by the Captivated Chrome extension**.
+If an SA5 user manually selects **Don't Text** from the Customer Details page, that preference is **not honored by the Captivated Chrome extension**.
 
 If the customer should also be prevented from receiving messages sent directly through Captivated:
 
@@ -240,7 +240,7 @@ If a customer is opted out in Captivated, they cannot be messaged on that Channe
 
 ![](https://learn.captivated.works/wp-content/uploads/2021/04/Screen-Shot-2021-05-03-at-11.18.14-AM.png)
 
-# AMA Before Service Texts
+## AMA Before Service Texts
 
 Texting through the Captivated integration is **independent of AMA Before Service Texts**.
 
@@ -252,11 +252,11 @@ Within SA5:
 
 Keeping these separate is important when troubleshooting why a customer did or did not receive a particular type of text.
 
-# Step 4: Send Individual Messages Using the Captivated Chrome Extension
+## Step 4: Send Individual Messages Using the Captivated Chrome Extension
 
 In addition to bulk messaging from SA5 reports, you can use the Captivated Chrome extension to send an individual customer a message and access their Captivated conversation history without leaving their Customer Details page.
 
-First, [install the Captivated Chrome extension](https://captivatedllc.mintlify.site/integrations/googlechromeextension).
+First, [install the Captivated Chrome extension](/integrations/googlechromeextension).
 
 ### Send an Individual Message
 
@@ -267,7 +267,7 @@ First, [install the Captivated Chrome extension](https://captivatedllc.mintlify.
 
 ![](https://learn.captivated.works/wp-content/uploads/2020/04/Chrome-Extenstion-Step-1-1024x650.png)
 
-Choose the Captivated Channel you want to send the message from.
+5. Choose the Captivated Channel you want to send the message from.
 
 ![](https://learn.captivated.works/wp-content/uploads/2020/04/Chrome-Extension-Select-Line-1024x561.png)
 
@@ -286,38 +286,40 @@ Select the **contact card** next to the text bubbles within the extension to vie
 
 ## Troubleshooting
 
-<Accordion title="Why didn't my message send?">
-  Check the SA5 **Call Log**. Common reasons for an unsuccessful message include:
+<AccordionGroup>
+  <Accordion title="Why didn't my message send?">
+    Check the SA5 **Call Log**. Common reasons for an unsuccessful message include:
 
-  - The customer has opted out
-  - The customer's phone number is invalid
-  - The template isn't assigned to the customer's branch
-  - An API key isn't available
-</Accordion>
+    - The customer has opted out
+    - The customer's phone number is invalid
+    - The template isn't assigned to the customer's branch
+    - An API key isn't available
+  </Accordion>
 
-<Accordion title="Why don't I see Integrations Setup?">
-  Integration access must be enabled within **Employee Security**.
-</Accordion>
+  <Accordion title="Why don't I see Integrations Setup?">
+    Integration access must be enabled within **Employee Security**.
+  </Accordion>
 
-<Accordion title="Why can't I find my SA5 template in Captivated?">
-  SA5 texting templates and Captivated Templates are separate. Templates created within SA5 are used with the SA5 **Send to Texting** functionality.
-</Accordion>
+  <Accordion title="Why can't I find my SA5 template in Captivated?">
+    SA5 texting templates and Captivated Templates are separate. Templates created within SA5 are used with the SA5 **Send to Texting** functionality.
+  </Accordion>
 
-<Accordion title="Where can I find messages sent from SA5 in Captivated?">
-  Change your Captivated conversation filters to **Everyone** and **All** to locate conversations beyond those currently assigned to you.
-</Accordion>
+  <Accordion title="Where can I find messages sent from SA5 in Captivated?">
+    Change your Captivated conversation filters to **Everyone** and **All** to locate conversations beyond those currently assigned to you.
+  </Accordion>
 
-<Accordion title="Why are messages appearing as new queued conversations?">
-  Review the **Captivated Conversation Options** when sending from SA5. For the recommended experience, leave both options unchecked.
-</Accordion>
+  <Accordion title="Why are messages appearing as new queued conversations?">
+    Review the **Captivated Conversation Options** when sending from SA5. For the recommended experience, leave both options unchecked.
+  </Accordion>
 
-<Accordion title="I selected Don't Text in SA5. Why can the customer still be texted from the Chrome extension?">
-  The SA5 **Don't Text** preference does not prevent a User from messaging the customer through the Captivated Chrome extension. The customer must also be opted out within Captivated.
-</Accordion>
+  <Accordion title="I selected Don't Text in SA5. Why can the customer still be texted from the Chrome extension?">
+    The SA5 **Don't Text** preference does not prevent a user from messaging the customer through the Captivated Chrome extension. The customer must also be opted out within Captivated.
+  </Accordion>
 
-<Accordion title="Can I unsend a bulk message?">
-  No. Once a bulk message has been sent, it cannot be unsent. Always review your recipients, template, and send options before sending.
-</Accordion>
+  <Accordion title="Can I unsend a bulk message?">
+    No. Once a bulk message has been sent, it cannot be unsent. Always review your recipients, template, and send options before sending.
+  </Accordion>
+</AccordionGroup>
 
 ## Need Help?
 
