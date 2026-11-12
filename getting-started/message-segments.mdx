@@ -1,148 +1,155 @@
 ---
 title: "Understanding Message Segments & Special Characters"
-description: "Learn how message length, emojis, and special characters affect your text messages, message segments, and messaging costs."
+description: "Learn how SMS message segments, special characters, and MMS affect message length, delivery, and messaging costs."
 ---
 
-Text messaging may seem simple, but there are a few things happening behind the scenes that can affect how your messages are delivered and billed.
-
-Understanding message segments and special characters will help you write more efficient text messages while keeping your messaging costs under control.
+A **message segment** is how mobile carriers measure the length of an SMS text message. Understanding message segments can help you manage messaging costs, avoid delivery issues, and communicate more effectively with your customers.
 
 ## What Is a Message Segment?
 
-A **message segment** is how mobile carriers measure the length of a text message.
+A standard SMS message can contain up to **160 characters** when using GSM-7 encoding.
 
-Most standard text messages can contain up to **160 characters** before they're automatically split into additional segments.
+When a message exceeds the character limit, it is divided into multiple segments. Each segment counts toward your messaging usage and may be billed separately.
 
-If your message exceeds the character limit, the carrier will divide it into multiple segments. Each segment is billed as an individual message.
+For example, a longer message may count as two or three segments even though it appears as a single message on your customer's phone.
 
-A longer message may count as two or three message segments instead of one.
+You can use the [Message Segment Calculator](https://twiliodeved.github.io/message-segment-calculator/) to estimate how many segments your message will use.
 
-<Tip>
-  Use the [segment calculator](https://twiliodeved.github.io/message-segment-calculator/) to see how many characters your message will be. 
-</Tip>
-
-# Why Do Message Segments Matter?
+## Why Do Message Segments Matter?
 
 Longer messages use more segments, which can:
 
 - Increase messaging costs.
-- Create longer messages that are more difficult to read.
-- Occasionally cause messages to be split or delivered separately on some devices.
+- Make messages more difficult to read.
+- Occasionally result in messages appearing separately on certain devices.
+- Increase the risk of delivery issues when messages become excessively long.
 
-Whenever possible, keep messages short, clear, and conversational.
+<Warning>
+  Some mobile carriers may block or reject SMS messages that exceed **10 segments**. To reduce the risk of delivery failures, consider shortening lengthy messages or sending the information as MMS instead.
+</Warning>
 
-### Avoid Sending Excessively Long SMS Messages
-
-Mobile carriers may block or reject SMS messages that exceed **10 message segments**, preventing them from reaching your customers.
-
-If your message is particularly long, consider shortening the text or sending it as an MMS instead.
-
-**Best Practices:**
-
-- Keep SMS messages concise to reduce the number of segments.
-- Watch for emojis and special characters, which can increase segment counts.
-- For longer content, consider converting your message into an image and attaching it as an MMS.
-- Review your message length before sending to help avoid delivery issues.
-
-**Important:** Splitting a long message into multiple SMS segments does not guarantee delivery. Carrier restrictions may prevent excessively long messages from being delivered.
-
-# How Special Characters Affect Your Messages
+## How Special Characters Affect Your Messages
 
 Not all characters are treated the same by mobile carriers.
 
-Using certain characters—such as emojis or special symbols—reduces the number of characters that fit into a single message segment.
+SMS messages primarily use two encoding standards:
 
-These rules are not set by Captivated. SMS character limits are determined by industry-standard character encoding, primarily GSM-7 and Unicode/UCS-2. Captivated works within these standards and calculates message segments based on how carriers will encode and transmit your message.
+- **GSM-7:** Supports standard letters, numbers, and many common symbols. A single SMS segment can contain up to 160 characters.
+- **Unicode (UCS-2):** Supports emojis, additional symbols, and characters from many languages. A single SMS segment can contain up to 70 characters.
 
-Common examples include:
+When a message contains characters that require Unicode encoding, the entire message may use the lower character limit.
 
-- E mojis: 😊 👍 ❤️ 🎉 ✅
-- Smart/curly quotation marks: “ ” ‘ 
-- Long dashes: — –
-- Ellipses: …
-- Bullets: •
-- Symbols: ™ © ® ✓ ★ → ←
-- Many accented characters: á í ó ú č š ž ł and others Non-English alphabets
-- Non-Latin characters and alphabets, including Chinese, Japanese, Korean, Arabic, Hebrew, Cyrillic, and others
-- Invisible Unicode spaces or formatting characters, which can sometimes be introduced when copying text from websites, Microsoft Word, Google Docs, or other applications
+### Common Characters That Can Affect Message Length
 
-There's nothing wrong with using these characters—they simply use a different encoding standard, which means your message may be divided into additional segments sooner than expected.
+Examples include:
 
-## Example
+- **Emojis:** 😊 👍 ❤️ 🎉 ✅
+- **Smart quotation marks:** “ ” ‘ ’
+- **Long dashes:** — –
+- **Ellipses:** …
+- **Bullets:** •
+- **Symbols:** ™ © ® ✓ ★ →
+- **Certain accented characters:** č š ž ł
+- **Non-Latin alphabets:** Chinese, Japanese, Korean, Arabic, Hebrew, Cyrillic, and others
+- **Invisible formatting characters:** Sometimes introduced when copying text from Word, Google Docs, or websites
 
-This message fits comfortably into a single message segment:
+Not every accented character requires Unicode. Common characters such as é, è, ñ, ü, ä, and ö are supported by GSM-7.
 
-> **Your lawn treatment is scheduled for tomorrow between 9:00 AM and 11:00 AM.**
+Some GSM-7 symbols, including `{ } [ ] \ ^ ~ | €`, count as two character positions.
 
-Now imagine adding several emojis, special symbols, and additional text. While the message still looks similar to your customer, it may now be sent as multiple message segments.
+There's nothing wrong with using special characters. Just be aware that they may increase the number of segments your message requires.
 
-<Note>
-  Not every special or accented character requires Unicode. Some characters—including é, è, ñ, ü, ä, ö, and several others—are supported by GSM-7. Characters such as \{ \} \[ \] \\ ^ ~ | € are also GSM-7 compatible but count as two character positions.
-</Note>
+## Sending an MMS Instead of a Long SMS
 
-# Best Practices
+If you need to share lengthy instructions, detailed information, or promotional content, consider converting your message into a **PNG image** and sending it as an MMS (Multimedia Messaging Service).
 
-Here are a few simple ways to keep your messages efficient:
+Unlike a text-only SMS, MMS allows you to include an image rather than sending all the information as multiple SMS segments.
 
-- Keep messages short and easy to read.
-- Only use emojis when they add value to the conversation.
-- Avoid copying text directly from Microsoft Word or Google Docs, as these programs often insert smart quotes and other special characters.
-- Use shortened links instead of long URLs whenever possible.
-- Preview your message before sending large announcements or marketing campaigns.
-- Consider using an image when you need to share detailed instructions or promotional content instead of sending several long text messages.
+### How to Send Your Message as an MMS
 
-# Simple Example
+<Steps>
+  <Step title="Create Your Message">
+    Create your message in a document or design tool, such as Canva, Microsoft Word, or Google Docs.
+  </Step>
+  <Step title="Save as a PNG">
+    Save or export your content as a **PNG image**. Make sure the text is large enough to read on a mobile phone.
+  </Step>
+  <Step title="Check the File Size">
+    Keep your image file **under 1 MB** to help ensure successful delivery.
+  </Step>
+  <Step title="Open a Conversation">
+    Open the customer's conversation in Captivated.
+  </Step>
+  <Step title="Attach Your Image">
+    Select the attachment option in the message composer and upload your PNG.
+  </Step>
+  <Step title="Add a Short Introduction">
+    Include a brief text message explaining what the image contains.
+  </Step>
+  <Step title="Review and Send">
+    Confirm that your image is readable and contains the correct information before sending.
+  </Step>
+</Steps>
 
-1 Segment
+When you attach an image, Captivated sends the message as MMS rather than a text-only SMS.
 
-> Hi John! Your lawn treatment is scheduled for tomorrow between 9:00–11:00 AM. Reply STOP to opt out.
+### Best Practices for MMS
 
-2\+ Segments
+- **Keep it readable:** Make sure the text in your image is large enough to read on a mobile device.
+- **Avoid overcrowding:** Don't place excessive amounts of information in a single image.
+- **Include context:** Add a short text introduction explaining what you're sending.
+- **Keep important information accessible:** Consider providing essential details in text or through a link as well.
+- **Review before sending:** Preview your image to confirm it's clear and accurate.
+
+For more information, see [Sending Attachments](/features/sending-attachments).
+
+## Tips for Keeping SMS Messages Short
+
+Here are a few ways to reduce unnecessary message segments:
+
+- **Be concise:** Keep your messages clear, conversational, and focused.
+- **Use emojis selectively:** Emojis can increase segment counts by changing the message's encoding.
+- **Avoid unnecessary formatting:** Copying text from documents or websites can introduce special characters.
+- **Use branded links:** If shortening a long URL, use a branded link associated with your business rather than public link shorteners such as bit.ly or TinyURL.
+- **Review announcements:** Check message length before sending bulk announcements or marketing campaigns.
+- **Consider MMS:** Use an image when lengthy instructions or promotional content would otherwise require numerous SMS segments.
+
+## Message Segment Example
+
+**Short Message**
+
+> Hi John! Your lawn treatment is scheduled for tomorrow between 9:00-11:00 AM. Reply STOP to opt out.
+
+**Longer Message**
 
 > Hi John! We wanted to remind you about your scheduled lawn treatment tomorrow between 9:00 and 11:00 AM. Please remember to move any lawn furniture, children's toys, pet bowls, garden hoses, or other obstacles before our technician arrives. If you have any questions, simply reply to this message.
 
-The second message communicates more information, but it also uses multiple message segments.
+The second message contains more information and requires additional message segments.
 
-# Tips for Keeping Messages Short
+While longer messages are sometimes necessary, keeping messages concise can help reduce costs and improve readability.
 
-Here are a few easy ways to reduce message segments:
+## Frequently Asked Questions
 
-- Keep messages clear and concise.
-- Avoid unnecessary words.
-- Use images instead of long written instructions when appropriate.
-- Be mindful when using emojis or special characters.
-- Use shortened links instead of long URLs. 
+<AccordionGroup>
+  <Accordion title="Why did my message count as multiple text messages?">
+    Your message may have exceeded the character limit for a single SMS or included characters that changed its encoding.
+  </Accordion>
 
-<Warning>
-  Do not common link shorteners like bit.ly, goog.le, tiny.url instead use a proprietary shortener with your business name.
-</Warning>
+  <Accordion title="Do emojis cost more?">
+    Not directly. However, emojis typically require Unicode encoding, which reduces the number of characters available per segment. This may increase the total number of segments used.
+  </Accordion>
 
-<Warning>
-  Images must be under 1mb in size for successful deliverability
-</Warning>
+  <Accordion title="Should I always stay under 160 characters?">
+    Not necessarily. Your priority should be sending clear, helpful information.
 
-# Frequently Asked Questions
+    Messages can exceed 160 characters when necessary, but be mindful of segment counts and avoid excessively long SMS messages.
+  </Accordion>
 
-<Accordion title="Why did my message count as multiple text messages?">
-  Your message either exceeded the character limit or included special characters that reduced the number of characters allowed in a single message segment.
-</Accordion>
+  <Accordion title="Does sending an MMS eliminate message segment charges?">
+    MMS is a different message type from SMS and may have different billing rates. Sending an image avoids dividing that image's content into multiple SMS text segments, but MMS messages may still incur messaging charges.
+  </Accordion>
+</AccordionGroup>
 
-<Accordion title="Do emojis cost more?">
-  Not directly. However, emojis reduce the number of characters that fit into each message segment, which may cause your message to use additional segments.
-</Accordion>
+## Need Help?
 
-<Accordion title="Should I always stay under 160 characters?">
-  Not necessarily.
-
-  Your priority should always be sending a clear, helpful message. While shorter messages often reduce costs and improve readability, it's perfectly acceptable to use multiple message segments when additional information provides value to your customer.
-</Accordion>
-
-# The Bottom Line
-
-Message segments and special characters are simply part of how text messaging works.
-
-By keeping your messages concise and understanding how special characters affect message length, you can better manage messaging costs while creating a great experience for your customers.
-
-<Tip>
-  Focus on writing messages that are clear, helpful, and easy to read. If an emoji or additional information improves the customer experience, don't be afraid to use it—just be aware that it may increase the number of message segments used.
-</Tip>
+If you have questions about message segments, SMS delivery, or sending MMS attachments, contact **Captivated Support** using the Support option in the left-hand menu.
