@@ -1,0 +1,117 @@
+---
+title: "Connecting Authorize.Net to Captivated"
+description: "Learn how to set up your Authorize.Net payment gateway and connect it to Captivated for use with Express Pay."
+---
+
+Captivated's [**Express Pay**](/premium-features/express-pay) feature allows your business to securely request and collect payments from customers through text messaging.
+
+If your business uses **Authorize.Net** as its payment gateway, you'll need to configure your gateway and connect it to Captivated before accepting payments.
+
+This guide walks you through the setup process.
+
+## Before You Begin
+
+To connect Authorize.Net to Captivated, you'll need:
+
+- An active merchant services account with a Merchant Service Provider (MSP).
+- An Authorize.Net payment gateway account.
+- Your Authorize.Net **API Login ID**.
+- Your Authorize.Net **Transaction Key**.
+- Access to your organization's payment provider settings in Captivated.
+
+<Note>
+  If you don't already have an Authorize.Net account, contact your Merchant Service Provider to get started.
+</Note>
+
+## Step 1: Contact Your Merchant Service Provider
+
+Before setting up your Authorize.Net gateway, contact your Merchant Service Provider (MSP) and request a **VAR sheet**.
+
+A VAR sheet contains the merchant processing information needed to configure your payment gateway.
+
+Your Merchant Service Provider can help you obtain this information and confirm that your merchant account is ready to connect with Authorize.Net.
+
+## Step 2: Set Up Your Authorize.Net Gateway
+
+Once you have the necessary merchant processing information:
+
+1. Visit [Authorize.Net](https://www.authorize.net/).
+2. Create or access your Authorize.Net payment gateway account.
+3. Complete the gateway setup using the information provided by your Merchant Service Provider.
+4. Confirm that your gateway is active and ready to process payments.
+
+<Note>
+  If you need assistance creating or activating your gateway, contact Authorize.Net or your Merchant Service Provider.
+</Note>
+
+## Step 3: Locate Your Authorize.Net API Credentials
+
+Captivated uses your Authorize.Net API credentials to connect to your payment gateway.
+
+1. Sign in to your Authorize.Net Merchant Interface.
+2. Navigate to **Account → Settings → API Credentials & Keys**.
+3. Locate your **API Login ID**.
+4. Generate a **Transaction Key** if you don't already have one available.
+5. Securely retain both credentials for the next step.
+
+<Warning>
+  Your API Login ID and Transaction Key are sensitive payment credentials. Do not share them through regular text messages or unsecured email.
+
+  If you generate a new Transaction Key, verify whether it will affect any existing integrations using your Authorize.Net gateway.
+</Warning>
+
+## Step 4: Connect Authorize.Net in Captivated
+
+Once you have your Authorize.Net credentials:
+
+1. Sign in to Captivated.
+2. Navigate to **Administration → Payment Providers**.
+3. Select **Add Payment Provider**.
+4. Choose **Authorize.Net**.
+5. Enter your **API Login ID** and **Transaction Key** in the corresponding fields.
+6. Save your payment provider settings.
+
+Your Authorize.Net gateway is now configured in Captivated.
+
+[SCREENSHOT: Captivated Add Payment Provider screen with Authorize.Net selected]
+
+## Step 5: Verify Your Payment Setup
+
+Before requesting payments from customers:
+
+1. Confirm that your Authorize.Net payment provider appears in Captivated.
+2. Verify that your gateway credentials were entered correctly.
+3. Confirm that your merchant account and payment gateway are active.
+4. Follow your organization's payment testing procedures before processing live customer payments.
+
+Once your setup is complete, you can use **Express Pay** to send secure payment requests through Captivated.
+
+For instructions on requesting and managing payments, see [Express Pay](/premium-features/express-pay).
+
+## Frequently Asked Questions
+
+<AccordionGroup>
+  <Accordion title="Do I need an Authorize.Net account to use this integration?">
+    Yes. You'll need an Authorize.Net payment gateway account connected to your merchant processing services.
+  </Accordion>
+
+  <Accordion title="What is a VAR sheet?">
+    A VAR sheet contains information about your merchant processing account that may be required when configuring your Authorize.Net gateway. Your Merchant Service Provider can provide it.
+  </Accordion>
+
+  <Accordion title="Where do I find my API Login ID and Transaction Key?">
+    Sign in to your Authorize.Net Merchant Interface and navigate to **Account → Settings → API Credentials & Keys**.
+  </Accordion>
+
+  <Accordion title="What if my payment provider isn't connecting?">
+    Confirm that your API Login ID and Transaction Key are correct and that your Authorize.Net gateway is active.
+
+    If you're still experiencing issues, contact Captivated Support for assistance.
+  </Accordion>
+</AccordionGroup>
+
+## Need Help?
+
+For assistance connecting Authorize.Net to Captivated, contact **Captivated Support** using the Support option in the left-hand menu.
+
+For questions about your merchant account, VAR sheet, or Authorize.Net gateway activation, contact your Merchant Service Provider or Authorize.Net directly.

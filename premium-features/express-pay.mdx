@@ -1,7 +1,15 @@
 ---
-title: "Express Pay – Collect Payment via Bank (ACH) and Credit Card"
-description: "Captivated Express Pay allows you to collect payments from your customers via text using credit card or ACH (bank account). Customers can securely open the payment request from their phone, choose their preferred payment method, and complete their payment.\n\nExpress Pay works directly within Captivated and uses Stripe and Plaid for payment processing and bank authentication."
+title: "Express Pay – Collect Payments via Bank (ACH) and Credit Card"
+description: "Learn how to request, collect, track, and manage customer payments through Captivated Express Pay."
 ---
+
+## Connecting a Payment Provider
+
+Before collecting payments through Express Pay, your organization must have a supported payment provider configured.
+
+Available payment methods may vary depending on your payment provider and account configuration.
+
+If your business uses Authorize.Net, follow our [Connecting Authorize.Net to Captivated](/premium-features/connecting-authorize-net) guide for setup instructions.
 
 ## Send a Payment Request
 
@@ -103,9 +111,9 @@ If a transaction you're looking for isn't displaying, select **Resync** to load 
 
 ## When Will the Money Reach My Bank Account?
 
-Express Pay payouts are deposited directly into the bank account connected to the payment account. The Express Pay FAQ lists typical processing as approximately **two business days**.
+Express Pay payouts are deposited into the bank account associated with your payment provider.
 
-I'd probably phrase this as **"typically"** rather than promising a two-business-day payout every time.
+Payments typically take approximately **two business days** to process, although actual payout timing may vary depending on your payment provider, financial institution, and account configuration.
 
 ## Who Can Send Payment Requests?
 
@@ -115,23 +123,27 @@ If you don't see the option to request a payment, contact your Captivated Admini
 
 ## Frequently Asked Questions
 
-<Accordion title="Does Express Pay use our existing credit card processor?">
-  No. Express Pay works directly through Captivated and includes credit card and ACH processing. It is designed for remote/text-to-pay transactions and does not replace an existing card-present solution such as a physical card reader.
-</Accordion>
+<AccordionGroup>
+  <Accordion title="Does Express Pay use our existing credit card processor?">
+    Express Pay requires a supported payment provider configured with Captivated. Whether your existing payment processor can be used depends on your provider and account setup.
 
-![](https://learn.captivated.works/wp-content/uploads/2021/06/Screenshot-2025-08-19-at-1.39.00%20PM-1024x491.png)
+    Contact Captivated Support to discuss your payment processing options.
+  </Accordion>
 
-<Accordion title="How do I know when a customer has paid?">
-  The payment status updates directly within the Captivated conversation once the payment has been received.
-</Accordion>
+  <Accordion title="How do I know when a customer has paid?">
+    The payment status updates directly within the Captivated conversation once the payment has been received.
 
-<Accordion title="Can customers choose which bank account to use?">
-  Yes. When paying by bank account, Plaid guides the customer through authentication and allows them to select the bank account they would like to use for the payment.
-</Accordion>
+    You can also review payment activity under **Dashboards → Payments**.
+  </Accordion>
 
-<Accordion title="Can customers use Apple Pay or Google Pay?">
-  Yes. Express Pay supports Apple Pay and Google Pay from compatible smartphones.
-</Accordion>
+  <Accordion title="Can customers choose which bank account to use?">
+    When ACH payments are available through your payment configuration, customers can securely connect and select their bank account using the supported bank authentication process.
+  </Accordion>
+
+  <Accordion title="Can customers use Apple Pay or Google Pay?">
+    Apple Pay and Google Pay are supported for eligible payment configurations and compatible devices. Available payment methods may vary by provider.
+  </Accordion>
+</AccordionGroup>
 
 ## Need Help?
 

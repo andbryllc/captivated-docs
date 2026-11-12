@@ -116,7 +116,8 @@
           "premium-features/virtual-door-knock",
           "premium-features/requesting-a-form",
           "premium-features/secure-chat",
-          "premium-features/express-pay"
+          "premium-features/express-pay",
+          "premium-features/connecting-authorize-net"
         ],
         "root": "premium-features/index"
       },
