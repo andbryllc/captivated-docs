@@ -26,21 +26,19 @@ If you don't see the Announcements feature, contact Captivated Support. Announce
   Tags are an organizational and audience-building tool. A Tag does **not**, by itself, indicate that a contact has consented to receive marketing or promotional messages.
 </Note>
 
-## Select Your Recipients
+## Review Your Recipient Counts
 
-The first step is deciding who should receive your Announcement.
+As you build your audience, Captivated displays three counts:
 
-You can build your audience using:
+| Count | What It Means |
+| :-- | :-- |
+| **Contacts Selected** | Contacts matching your audience selections. |
+| **Non-Deliverables** | Selected contacts who cannot currently receive the message. |
+| **Estimated Recipients** | The estimated number of contacts who will receive your Announcement. |
 
-- **Select Tags** — Build an audience using Tags assigned to your contacts.
-- **Select Contacts** — Search for and select specific contacts individually.
-- **A combination of both** — Use Tags to build your larger audience and individual Contacts as needed.
-
-As you make your selections, Captivated automatically calculates your audience.
-
-<Danger>
-  **Double-check your audience.** Selecting the wrong Tag can potentially add a large number of unintended recipients. Don't rely on the Tag name alone—make sure you understand who is included in the Tag before sending
-</Danger>
+<Warning>
+  **Always verify your Estimated Recipients before continuing.** If you expected to reach 50 contacts but Captivated shows 500, stop and review your Tags, exclusions, and individual contact selections.
+</Warning>
 
 ## Select Recipients Using Tags
 
@@ -173,7 +171,9 @@ As you compose your Announcement, Captivated displays your **Estimated Character
   Pay careful attention to these boxes before sending.
 </Warning>
 
-SMS messages are billed and counted by **message segment**, not simply by the number of recipients.
+SMS usage is calculated based on the number of segments sent to each recipient. A longer message may use multiple SMS segments per recipient, increasing your total messaging usage.
+
+For example, an Announcement containing two SMS segments sent to 500 recipients would use approximately 1,000 SMS segments.
 
 Standard-character SMS messages can contain up to **160 characters in the first segment**. Longer messages are divided into additional segments. Emojis and certain special characters can change the message's encoding, resulting in fewer characters fitting into each segment.
 
@@ -197,7 +197,7 @@ A small increase in message length can therefore make a significant difference w
   **Check both numbers together:** Always review your **Estimated Recipients AND message segments**. A multi-segment message sent to a large audience can use a significant number of messages from your plan.
 </Warning>
 
-As a best practice, keep Announcements concise and generally aim for **one to two segments when practical**. 
+As a best practice, keep Announcements concise and generally aim for **one to two segments when practical**.
 
 <Tip>
   Use this [segment calculator](https://twiliodeved.github.io/message-segment-calculator/) to confirm segment count before sending.
@@ -223,34 +223,32 @@ By enabling the acknowledgment, you are confirming that your message complies wi
   **Announcements should never be used for spam or mass marketing to contacts who have not provided the appropriate consent.** Accounts that engage in prohibited messaging may be subject to messaging restrictions or suspension.
 </Danger>
 
-## Final Review Before Sending
+## Preview and Review Your Announcement
 
-Before selecting **Send**, stop and review your Announcement one final time.
+Before sending, select **Preview** to review your Announcement.
 
-**Verify all of the following:**
+Depending on the Merge Field, the preview may display a placeholder rather than an individual contact's populated value. The appropriate value will populate when the Announcement is sent.
 
-1. **Audience** — Did I select the correct Tags and/or Contacts?
-2. **Exclusions** — Did I exclude everyone who should not receive this message?
-3. **Estimated Recipients** — Does this number make sense?
-4. **Message** — Is the wording, spelling, and information correct?
+For important or large Announcements, consider sending a test message to yourself or a small internal group first.
+
+### Final Sending Checklist
+
+Before selecting **Send** or **Schedule**, verify:
+
+1. **Audience** — Are the correct Tags and Contacts selected?
+2. **Exclusions** — Have you excluded contacts who shouldn't receive this message?
+3. **Estimated Recipients** — Does the recipient count match your expectations?
+4. **Message** — Is the content accurate and free of errors?
 5. **Merge Fields** — Will personalization populate correctly?
 6. **Links & Attachments** — Are they correct and working?
-7. **Segments** — Am I comfortable with the message usage based on my recipient count?
-8. **Channel** — Am I sending from the correct phone number?
-9. **Consent** — Are these contacts eligible to receive this type of message?
-10. **Timing** — Is this an appropriate time for recipients to receive the message?
+7. **Segments** — Have you reviewed the estimated message usage?
+8. **Channel** — Are you sending from the correct phone number?
+9. **Consent** — Are recipients eligible to receive this type of message?
+10. **Timing** — Is the delivery time appropriate?
 
-<Warning>
-  There is **no undo button**. Once an Announcement begins sending, it cannot be unsent, recalled, or stopped. Review everything carefully before selecting Send.
-</Warning>
-
-## Preview Your Announcement
-
-Select **Preview** to review your Announcement before sending.
-
-Depending on the Merge Field, the preview may display the Merge Field placeholder rather than an individual contact's populated value. The appropriate value will populate when the Announcement is sent.
-
-For important or large Announcements, consider sending a test message to yourself or a small internal group first to confirm that the message, links, and attachments appear as expected.
+<Danger>
+  **Announcements cannot be recalled.** Once sending begins, the Announcement cannot be unsent or stopped. Review everything carefully before proceeding.
+</Danger>
 
 ## Send Now or Schedule for Later
 
@@ -344,7 +342,7 @@ Recipients' replies return to Captivated as **individual conversations**. Recipi
 </Accordion>
 
 <Accordion title="Can I send a group text where everyone sees each other's replies?">
-  Yes, that is a group message and is separate from an announcement.
+  Group messaging is separate from Announcements. If your organization has group messaging available, participants can see replies within the group conversation.” Only use this wording if it accurately reflects Captivated's group messaging functionality.
 </Accordion>
 
 ## Need Help?
