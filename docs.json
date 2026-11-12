@@ -181,7 +181,6 @@
           {
             "group": "Forms & Lead Management",
             "pages": [
-              "premium-features/jotform-integration",
               "integrations/send-adf-leads"
             ]
           },
