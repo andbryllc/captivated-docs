@@ -76,8 +76,8 @@
             "pages": [
               "features/creating-and-editing-contacts",
               "features/importing-contacts",
-              "features/tagging-contacts",
               "features/archive-contacts",
+              "features/tagging-contacts",
               "features/masking-numbers",
               "features/contact-exchange-request",
               "features/sending-your-contact-card",
